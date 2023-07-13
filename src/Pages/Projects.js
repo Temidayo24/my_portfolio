@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Project from '../Components/Project'
-import form from "../reactForm.png"
+import form from "../form.mp4"
 import todo from "../todo.mp4"
 import stars from "../stars.mp4"
 import google from "../google.mp4"
@@ -35,6 +35,8 @@ onClick={onClickHandler}>
           useKeyboardArrows
           showThumbs={false}
           showStatus={false}
+          showIndicators={false}
+          showArrows={false}
           autoPlay
           infiniteLoop
           dynamicHeight={true}

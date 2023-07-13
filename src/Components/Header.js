@@ -58,7 +58,7 @@ const Header = () => {
   return (
     <div className="flex justify-between px-6 py-4 text-eggshell text-sm large:text-base absolute w-full z-1000">
       {dropdown ? " " : <div className="text-eggshell">Temidayo Kehinde</div>}
-      <div className="large:flex gap-6 font-bold hidden">
+      <div className="large:flex gap-6 hidden">
         <NavLink
           exact
           to="/"
