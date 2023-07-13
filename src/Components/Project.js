@@ -18,7 +18,7 @@ const Project = ({ bg1, img1, img2, text, title, alt1, alt2 }) => {
           <source
             src={bg1}
             type="video/mp4"
-            className="group relative w-full h-fit transition-opacity group-hover:opacity-50"
+            className="group relative w-full h-5/6 transition-opacity group-hover:opacity-50"
           />
         </video>
         <div className="hidden group-hover:block absolute z-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">

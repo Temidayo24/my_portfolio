@@ -27,9 +27,9 @@ onClick={onClickHandler}>
 
 
   return (
-    <div className="bg-blue-centric h-full large:h-screen text-eggshell flex flex-col">
+    <div className="bg-blue-centric h-full large:h-full text-eggshell flex flex-col">
       <Header />
-      <div className="large:p-20 large:h-screen  px-5 pt-16 h-full">
+      <div className="large:p-20 large:h-full  px-5 pt-16 h-full">
         <Carousel
           className="w-full pt-10 h-full flex"
           useKeyboardArrows
@@ -91,7 +91,7 @@ onClick={onClickHandler}>
           </div>
         </Carousel>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }
