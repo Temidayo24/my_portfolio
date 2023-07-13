@@ -10,7 +10,7 @@ import Skills from "../Components/Skills";
 
 const BootCamps = () => {
   return (
-    <div className="bg-blue-centric w-full m-0 text-leather large:h-screen h-full">
+    <div className="bg-blue-centric w-full m-0 text-leather h-screen">
       <Header />
       <div className="large:h-screen h-full large:flex-row flex flex-col justify-center gap-8">
         <ol className="text-leather large:pt-32 pt-24 flex flex-col gap-8 large:text-right text-center large:w-2/4">
