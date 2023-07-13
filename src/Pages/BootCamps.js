@@ -13,7 +13,7 @@ const BootCamps = () => {
     <div className="bg-blue-centric w-full m-0 text-leather h-screen">
       <Header />
       <div className="large:h-screen h-full large:flex-row flex flex-col justify-center gap-8">
-        <ol className="text-leather large:pt-32 pt-24 flex flex-col gap-8 large:text-right text-center large:w-2/4">
+        <ol className="text-leather large:pt-32 pt-10 flex flex-col gap-8 large:text-right text-center large:w-2/4">
           <li className="flex flex-col gap-3">
             <div>
               <h1 className="text-3xl text-coral">Intro to Programming</h1>
