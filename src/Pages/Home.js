@@ -7,6 +7,7 @@ import tag from "../closetag.png";
 import { Link } from "react-router-dom";
 import Header from "../Components/Header";
 import { useEffect, useState } from "react";
+import Footer from "../Components/Footer";
 
 const Home = () => {
   const texts = ["Hi!", "Bonjour!", "Ciao!", "Hola!"];
@@ -21,7 +22,7 @@ const Home = () => {
   }, [texts.length]);
 
   return (
-    <div className="bg-blue-centric w-full m-0 text-eggshell h-screen justify-between">
+    <div className="bg-blue-centric w-full m-0 text-eggshell h-screen flex flex-col justify-between">
       <Header />
       <div className="text-eggshell pt-28 w-full flex flex-col gap-8 justify-between self-center">
         <div className="flex flex-col w-full items-center self-center justify-between gap-4">
@@ -42,10 +43,10 @@ const Home = () => {
               <img src={tag} className="inline large:w-10 pl-2 w-8" />
             </span>
           </div>
-          <div className="tracking-wide capitalize text-center w-5/6 large:w-4/6 large:text-lg italic">
+          <div className="tracking-wide capitalize text-center w-5/6 large:w-3/6 large:text-lg">
             <p className="pb-4">
-              I am <span className="">passionate</span> about bridging
-              the gap between businesses and their customers by bringing{" "}
+              I am <span className="">passionate</span> about bridging the gap
+              between businesses and their customers by bringing{" "}
               <span className=" "> user-friendly designs</span> to life using{" "}
               <span className=""> codes.</span>
             </p>
@@ -58,10 +59,8 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <span className="w-fit pl-12 h-fit self-end text-eggshell pr-2 font-bold text-md italic justify-end text-right bg-coral ">
-          Built with React + Tailwind.
-        </span>
       </div>
+      <Footer/>
     </div>
   );
 };

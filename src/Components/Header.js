@@ -63,7 +63,7 @@ const Header = () => {
           exact
           to="/"
           style={({ isActive }) => ({
-            color: isActive ? "#ff533d" : "#fee8b0",
+            color: isActive ? "#ff533d" : "#f5f5f5",
             borderBottom: isActive ? "2px solid #ff533d" : "none",
           })}
         >
@@ -72,7 +72,7 @@ const Header = () => {
         <NavLink
           to="/my_projects"
           style={({ isActive }) => ({
-            color: isActive ? "#ff533d" : "#fee8b0",
+            color: isActive ? "#ff533d" : "#f5f5f5",
             borderBottom: isActive ? "2px solid #ff533d" : "none",
           })}
         >
@@ -81,7 +81,7 @@ const Header = () => {
         <NavLink
           to="/bootCamps"
           style={({ isActive }) => ({
-            color: isActive ? "#ff533d" : "#fee8b0",
+            color: isActive ? "#ff533d" : "#f5f5f5",
             borderBottom: isActive ? "2px solid #ff533d" : "none",
           })}
         >

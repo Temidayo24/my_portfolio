@@ -7,10 +7,11 @@ import html from "./../html-5.png";
 import css from "./../css-3.png";
 import react from "./../react.png";
 import Skills from "../Components/Skills";
+import Footer from "../Components/Footer";
 
 const BootCamps = () => {
   return (
-    <div className="bg-blue-centric w-full m-0 text-eggshell h-screen">
+    <div className="bg-blue-centric w-full m-0 text-eggshell h-screen flex flex-col">
       <Header />
       <div className="large:h-screen h-full large:flex-row flex flex-col justify-center gap-8">
         <ol className="text-eggshell large:pt-32 pt-2 flex flex-col gap-8 large:text-right text-center large:w-2/4">
@@ -56,6 +57,7 @@ const BootCamps = () => {
           <Skills location={git} text="Git" />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

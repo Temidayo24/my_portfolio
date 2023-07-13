@@ -13,6 +13,7 @@ import left from "../chevronleft.png"
 import right from "../chevronright.png"
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Footer from '../Components/Footer'
 
 const Projects = () => {
 
@@ -26,9 +27,9 @@ onClick={onClickHandler}>
 
 
   return (
-    <div className="bg-blue-centric h-full text-eggshell">
+    <div className="bg-blue-centric h-full large:h-screen text-eggshell flex flex-col">
       <Header />
-      <div className="large:p-20 large:h-full  px-5 pt-16 h-full sm:h-full">
+      <div className="large:p-20 large:h-screen  px-5 pt-16 h-full">
         <Carousel
           className="w-full pt-10 h-full flex"
           useKeyboardArrows
@@ -88,6 +89,7 @@ onClick={onClickHandler}>
           </div>
         </Carousel>
       </div>
+      <Footer/>
     </div>
   );
 }
