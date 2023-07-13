@@ -26,9 +26,9 @@ onClick={onClickHandler}>
 
 
   return (
-    <div className="bg-blue-centric h-screen sm:h-full text-leather">
+    <div className="bg-blue-centric h-full text-eggshell">
       <Header />
-      <div className="large:p-20 large:h-screen  px-5 pt-16 h-screen sm:h-full">
+      <div className="large:p-20 large:h-full  px-5 pt-16 h-full sm:h-full">
         <Carousel
           className="w-full pt-10 h-full flex"
           useKeyboardArrows

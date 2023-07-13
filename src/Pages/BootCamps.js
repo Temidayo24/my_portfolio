@@ -10,38 +10,38 @@ import Skills from "../Components/Skills";
 
 const BootCamps = () => {
   return (
-    <div className="bg-blue-centric w-full m-0 text-leather h-screen">
+    <div className="bg-blue-centric w-full m-0 text-eggshell h-screen">
       <Header />
       <div className="large:h-screen h-full large:flex-row flex flex-col justify-center gap-8">
-        <ol className="text-leather large:pt-32 pt-10 flex flex-col gap-8 large:text-right text-center large:w-2/4">
+        <ol className="text-eggshell large:pt-32 pt-10 flex flex-col gap-8 large:text-right text-center large:w-2/4">
           <li className="flex flex-col gap-3">
             <div>
-              <h1 className="text-3xl text-coral">Intro to Programming</h1>
-              <span className="font-bold">Udacity | access </span>
+              <h1 className="large:text-3xl text-2xl text-coral">Intro to Programming</h1>
+              <span className="">Udacity | access </span>
             </div>
-            <Link className="underline italic text-coral">
+            <Link className="underline italic text-coral text-l">
               Certification in progress
             </Link>
           </li>
           <li className="flex flex-col gap-3">
             <div>
-              <h1 className="text-3xl text-coral">Software Development </h1>
-              <span className="font-bold">Stutern | Ingressive for Good </span>
+              <h1 className="large:text-3xl text-2xl text-coral">Software Development </h1>
+              <span className="">Stutern | Ingressive for Good </span>
             </div>
-            <Link className="underline italic text-coral">
+            <Link className="underline italic text-coral text-l">
               Click to see certification
             </Link>
           </li>
           <li className="flex flex-col gap-3">
             <div>
-              <h1 className="text-3xl text-coral">
+              <h1 className="large:text-3xl text-2xl text-coral">
                 Frontend (HTML/CSS/JavaScript)
               </h1>
-              <span className="font-bold">Zuri | Ingressive for Good </span>
+              <span className="">Zuri | Ingressive for Good </span>
             </div>
             <Link
               to="https://w2pp.zuriboard.com/dashboard/certificate/41b6c30f-47f9-43b5-a166-cba3ff9849e2" target="_blank"
-              className="underline italic text-coral"
+              className="underline italic text-coral text-l"
             >
               Click to see certification
             </Link>

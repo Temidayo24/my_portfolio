@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <div className="bg-blue-centric w-full m-0 text-eggshell h-screen justify-between">
       <Header />
-      <div className="text-leather pt-28 w-full flex flex-col gap-8 justify-between self-center">
+      <div className="text-eggshell pt-28 w-full flex flex-col gap-8 justify-between self-center">
         <div className="flex flex-col w-full items-center self-center justify-between gap-4">
           <img src={img} className="w-28 h-28 rounded-full  animate-wiggle " />
           <div className="flex flex-col text-center justify-center ">
@@ -51,14 +51,14 @@ const Home = () => {
             </p>
             <p>
               <span className="">
-                Eating. <span className="text-leather">Coding. </span> Singing.
+                Eating. <span className="text-eggshell">Coding. </span> Singing.
               </span>
               <br />
               ...These three things make me happy.
             </p>
           </div>
         </div>
-        <span className="w-fit pl-12 h-fit self-end text-leather pr-2 font-bold text-md italic justify-end text-right bg-coral ">
+        <span className="w-fit pl-12 h-fit self-end text-eggshell pr-2 font-bold text-md italic justify-end text-right bg-coral ">
           Built with React + Tailwind.
         </span>
       </div>

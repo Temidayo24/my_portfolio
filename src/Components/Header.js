@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 const Dropdown = () => {
   return (
-    <div className="flex justify-between gap-6 font-bold mt-5 p-10  bg-leather h-screen items-start">
+    <div className="flex justify-between gap-6 font-bold mt-5 p-10  bg-eggshell h-screen items-start">
       <div className="flex flex-col gap-6 font-bold text-xl">
         <NavLink
           exact
@@ -56,8 +56,8 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between px-6 py-4 text-leather text-sm large:text-base absolute w-full z-1000">
-      {dropdown ? " " : <div className="text-leather">Temidayo Kehinde</div>}
+    <div className="flex justify-between px-6 py-4 text-eggshell text-sm large:text-base absolute w-full z-1000">
+      {dropdown ? " " : <div className="text-eggshell">Temidayo Kehinde</div>}
       <div className="large:flex gap-6 font-bold hidden">
         <NavLink
           exact
@@ -101,17 +101,17 @@ const Header = () => {
             className={
               dropdown
                 ? "w-8 h-0.5 bg-coral block rotate-45"
-                : "w-8 h-0.5 bg-leather block"
+                : "w-8 h-0.5 bg-eggshell block"
             }
           ></span>
           <span
-            className={dropdown ? "hidden" : "w-8 h-0.5 bg-leather block"}
+            className={dropdown ? "hidden" : "w-8 h-0.5 bg-eggshell block"}
           ></span>
           <span
             className={
               dropdown
                 ? "w-8 h-0.5 bg-coral block -rotate-45"
-                : "w-8 h-0.5 bg-leather block"
+                : "w-8 h-0.5 bg-eggshell block"
             }
           ></span>
         </div>

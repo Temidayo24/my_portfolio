@@ -33,7 +33,7 @@ const Project = ({ bg1, img1, img2, text, title, alt1, alt2 }) => {
         </div>
       </div>
       <div className="flex flex-col h-1/5 large:gap-2">
-        <span className="text-leather text-xl font-bold">{title}</span>
+        <span className="text-eggshell text-xl font-bold">{title}</span>
         <span className="text-coral">{text}</span>
       </div>
     </div>

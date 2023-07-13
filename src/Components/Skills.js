@@ -6,7 +6,7 @@ const Skills = ({location, text}) => {
       <div className=" p-2 ">
         <img src={location} className="w-10 m-auto large:m-0 " />
       </div>
-      <span className="border-0 rounded-lg border-orange-500 rounded-2 px-2 text-l font-bold text-leather">
+      <span className="border-0 rounded-lg border-orange-500 rounded-2 px-2 large:text-l text-base large:font-bold text-eggshell">
         {text}
       </span>
     </div>
