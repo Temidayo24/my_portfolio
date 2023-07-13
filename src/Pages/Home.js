@@ -24,8 +24,8 @@ const Home = () => {
   return (
     <div className="bg-blue-centric w-full m-0 text-eggshell h-screen flex flex-col justify-between">
       <Header />
-      <div className="text-eggshell pt-28 w-5/6 ">
-        <div className="m-auto ">
+      <div className="text-eggshell pt-28 w-5/6 h-5/6 flex items-center">
+        <div className=" ">
           <img src={img} className="w-2/6 h-96 float-right rounded-full  animate-wiggle " />
           <div className="flex flex-col gap-4 justify-center">
             <div className="flex flex-col justify-center ">
