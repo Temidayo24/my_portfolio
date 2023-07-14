@@ -7,7 +7,7 @@ export default withMT({
       width: {
         small: "12px",
         medium: "24px",
-        project: "90%"
+        project: "95%"
       },
 
       brightness: {
