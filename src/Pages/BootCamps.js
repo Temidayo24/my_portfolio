@@ -11,44 +11,49 @@ import Footer from "../Components/Footer";
 
 const BootCamps = () => {
   return (
-    <div className="bg-black w-full m-0 text-eggshell h-screen flex flex-col">
+    <div className="bg-black w-full m-0 text-coral h-screen flex flex-col">
       <Header />
       <div className="large:h-screen h-full large:flex-row flex flex-col justify-center gap-8">
         <ol className="text-eggshell large:pt-32 pt-24 flex flex-col gap-8 large:text-right text-center large:w-2/4">
           <li className="flex flex-col gap-3">
             <div>
-              <h1 className="large:text-3xl text-2xl text-coral">Intro to Programming</h1>
-              <span className="">Udacity | access </span>
+              <h1 className="large:text-3xl text-2xl text-eggshell">
+                Intro to Programming
+              </h1>
+              <span className="text-coral">Udacity | access </span>
             </div>
-            <Link className="underline italic text-coral text-l">
+            <Link className="underline italic text-eggshell text-l">
               Certification in progress
             </Link>
           </li>
           <li className="flex flex-col gap-3">
             <div>
-              <h1 className="large:text-3xl text-2xl text-coral">Software Development </h1>
-              <span className="">Stutern | Ingressive for Good </span>
+              <h1 className="large:text-3xl text-2xl text-eggshell">
+                Software Development{" "}
+              </h1>
+              <span className="text-coral">Stutern | Ingressive for Good </span>
             </div>
-            <Link className="underline italic text-coral text-l">
+            <Link className="underline italic text-eggshell text-l">
               Click to see certification
             </Link>
           </li>
           <li className="flex flex-col gap-3">
             <div>
-              <h1 className="large:text-3xl text-2xl text-coral">
+              <h1 className="large:text-3xl text-2xl text-eggshell">
                 Frontend (HTML/CSS/JavaScript)
               </h1>
-              <span className="">Zuri | Ingressive for Good </span>
+              <span className="text-coral">Zuri | Ingressive for Good </span>
             </div>
             <Link
-              to="https://w2pp.zuriboard.com/dashboard/certificate/41b6c30f-47f9-43b5-a166-cba3ff9849e2" target="_blank"
-              className="underline italic text-coral text-l"
+              to="https://w2pp.zuriboard.com/dashboard/certificate/41b6c30f-47f9-43b5-a166-cba3ff9849e2"
+              target="_blank"
+              className="underline italic text-eggshell text-l"
             >
               Click to see certification
             </Link>
           </li>
         </ol>
-        <hr className="border-s border-coral large:h-4/6 large:self-center" />
+        <hr className="border-s border-eggshell large:h-4/6 large:self-center" />
         <div className="flex large:flex-col gap-4 justify-center large:w-2/4 ">
           <Skills location={react} text="React" />
           <Skills location={tailwind} text="Tailwindcss" />
