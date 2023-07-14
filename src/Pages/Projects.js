@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <div className="bg-black h-full large:h-full text-white flex flex-col">
       <Header />
-      <div className="large:mt-20 large:h-full w-3/5  px-5 py-16 grid grid-cols-2 gap-2 place-content-center justify-center m-auto">
+      <div className="large:mt-20 large:h-full large:w-3/5  w-5/6 px-5 py-16 grid large:grid-cols-2 large:gap-2 gap-4 place-content-center justify-center mx-auto mt-20">
         <Project
           bg1={stars}
           img={arrow}

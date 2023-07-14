@@ -25,8 +25,8 @@ const Home = () => {
     <div className="bg-black w-full m-0 text-eggshell h-screen flex flex-col justify-between">
       <Header />
       <div className="text-eggshell pt-28 w-5/6 h-5/6 flex items-center">
-        <div className="flex flex-row-reverse gap-6 ">
-          <img src={img} className="w-2/6 h-full animate-wiggle rounded-corners" />
+        <div className="flex large:flex-row-reverse flex-col gap-6 ">
+          <img src={img} className="w-2/6 h-full animate-wiggle large:rounded-corners rounded-full hidden" />
           <div className="flex flex-col gap-4 justify-center">
             <div className="flex flex-col justify-center ">
               <p className="large:text-2xl text-xl flex-col w-full text-right">
@@ -39,7 +39,7 @@ const Home = () => {
                   Temidayo Kehinde
                 </span>
               </p>
-              <span className="large:text-xl text-sm large:text-right text-left">
+              <span className="large:text-xl text-sm text-right">
                 Front-End Web Developer{" "}
                 <img src={tag} className="inline large:w-10 pl-2 w-8" />
               </span>

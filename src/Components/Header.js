@@ -5,6 +5,8 @@ import gitlogo from "../github.svg";
 import linkedin from "../linkedin.svg";
 import mail from "../email.png";
 import call from "../call.png";
+import menu from "../menu.png";
+import close from "../close.svg";
 import { NavLink } from "react-router-dom";
 
 const Dropdown = () => {
@@ -37,7 +39,7 @@ const Dropdown = () => {
           BootCamps & Skills
         </NavLink>
       </div>
-      <div className="flex flex-col p-5 justify-end items-center bg-blue-centric gap-2">
+      <div className="flex flex-col p-5 justify-end items-center bg-coral gap-2">
         <Socials location={gitlogo} to="/git" alt="github" />
         <Socials location={linkedin} to="/git" alt="linkedin" />
         <Socials location={twitter} to="/git" alt="twitter" />
@@ -56,8 +58,12 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between px-6 py-4 text-eggshell text-sm large:text-base absolute w-full z-1000">
-      {dropdown ? " " : <div className="text-eggshell">Temidayo Kehinde</div>}
+    <div className="flex justify-between px-6 py-4 text-eggshell large:text-base absolute w-full z-1000">
+      {dropdown ? (
+        " "
+      ) : (
+        <div className="text-eggshell text-sm large:text-lg">Temidayo Kehinde</div>
+      )}
       <div className="large:flex gap-6 hidden">
         <NavLink
           exact
@@ -95,26 +101,40 @@ const Header = () => {
         <Socials location={mail} to="/git" alt="mail" />
         <Socials location={call} to="/git" alt="call" />
       </div>
-      <div onClick={handleClick} className={dropdown ? "w-screen relative z-50" : "flex flex-col gap-2 large:hidden"}>
-        <div className={dropdown ? "flex flex-col items-end" : "flex flex-col gap-2 large:hidden"}>
+      <div
+        onClick={handleClick}
+        className={
+          dropdown
+            ? "w-screen relative z-50"
+            : "flex flex-col gap-2 text-xl large:hidden items-end"
+        }
+      >
+        <img src={dropdown ? close : menu} className="w-8  self-end justify-end"/>
+        {/* <div
+          className={
+            dropdown
+              ? "flex flex-col items-end"
+              : "flex flex-col gap-2 large:hidden"
+          }
+        >
           <span
             className={
               dropdown
-                ? "w-8 h-0.5 bg-coral block rotate-45"
-                : "w-8 h-0.5 bg-eggshell block"
+                ? "w-8 h-2 bg-coral block rotate-45"
+                : "w-8 h-2 bg-eggshell block"
             }
           ></span>
           <span
-            className={dropdown ? "hidden" : "w-8 h-0.5 bg-eggshell block"}
+            className={dropdown ? "hidden" : "w-8 h-2 bg-eggshell block"}
           ></span>
           <span
             className={
               dropdown
-                ? "w-8 h-0.5 bg-coral block -rotate-45"
-                : "w-8 h-0.5 bg-eggshell block"
+                ? "w-8 h-2 bg-coral block -rotate-45"
+                : "w-8 h-2 bg-eggshell block"
             }
           ></span>
-        </div>
+        </div> */}
         {dropdown && <Dropdown />}
       </div>
     </div>
