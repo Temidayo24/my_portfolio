@@ -34,6 +34,7 @@ export default withMT({
       screen: "100vh",
       small: "20px",
       medium: "24px",
+      half: "45vh"
     },
 
     colors: {

@@ -11,8 +11,8 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2 }) => {
     }
   };
   return (
-    <div className="h-full w-full flex flex-row gap-2 border-sm border-eggshell overflow-hidden rounded-corners2 large:gap-6 ">
-      <div className="relative  h-full group ">
+    <div className="large:h-full h-half w-full flex flex-row gap-2 border-sm border-eggshell overflow-hidden rounded-corners2 large:gap-6 ">
+      <div className="relative large:h-full h-96 group ">
         <div className="group relative w-full h-full transition-opacity group-hover:opacity-40 bg-eggshell ">
           <video ref={videoRef} onClick={handleVideoPlay} muted autoPlay loop>
             <source src={bg1} type="video/mp4" />
