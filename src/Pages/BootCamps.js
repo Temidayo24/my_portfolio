@@ -57,7 +57,6 @@ const BootCamps = () => {
           <Skills location={git} text="Git" />
         </div>
       </div>
-      <Footer/>
     </div>
   );
 };
