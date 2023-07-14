@@ -23,7 +23,7 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2 }) => {
             className="h-full w-fit transition-opacity group-hover:opacity-50"
           />
         </div>
-        <div className="hidden group-hover:block absolute z-100 left-1/2 bottom-0 -translate-x-1/2 -translate-y-1/2 top-1/2 w-full text-eggshell">
+        <div className="hidden group-hover:block absolute z-100 left-1/2 bottom-0 -translate-x-1/2 -translate-y-1/2 top-1/2 w-full text-eggshell overflow-hidden">
           <div className="flex flex-col-reverse gap-2 w-full h-full px-4 justify-center">
             <div className="flex">
               <Link to="" className="flex gap-2 w-full underline">
