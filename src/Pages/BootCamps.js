@@ -11,7 +11,7 @@ import Footer from "../Components/Footer";
 
 const BootCamps = () => {
   return (
-    <div className="bg-blue-centric w-full m-0 text-eggshell h-screen flex flex-col">
+    <div className="bg-black w-full m-0 text-eggshell h-screen flex flex-col">
       <Header />
       <div className="large:h-screen h-full large:flex-row flex flex-col justify-center gap-8">
         <ol className="text-eggshell large:pt-32 pt-2 flex flex-col gap-8 large:text-right text-center large:w-2/4">

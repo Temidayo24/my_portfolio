@@ -16,13 +16,13 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 3000);
+    }, 1000);
 
     return () => clearInterval(timer);
   }, [texts.length]);
 
   return (
-    <div className="bg-blue-centric w-full m-0 text-eggshell h-screen flex flex-col justify-between">
+    <div className="bg-black w-full m-0 text-eggshell h-screen flex flex-col justify-between">
       <Header />
       <div className="text-eggshell pt-28 w-5/6 h-5/6 flex items-center">
         <div className="flex flex-row-reverse gap-6 ">
@@ -35,7 +35,7 @@ const Home = () => {
                 </span>
                 <br className="large:hidden" />
                 <span>My name is </span>
-                <span className="text-coral large:text-5xl text-3xl">
+                <span className="text-coral large:text-5xl text-3xl ">
                   Temidayo Kehinde
                 </span>
               </p>

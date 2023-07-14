@@ -1,99 +1,65 @@
-import React from 'react'
-import Header from '../Components/Header'
-import Project from '../Components/Project'
-import form from "../form.mp4"
-import todo from "../todo.mp4"
-import stars from "../stars.mp4"
-import google from "../google.mp4"
-import insta from "../Insta.mp4"
-import udemy from "../udemy.mp4"
-import git from "../github.svg"
-import browser from "../broswer.png"
-import left from "../chevronleft.png"
-import right from "../chevronright.png"
-import { Carousel } from 'react-responsive-carousel'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Footer from '../Components/Footer'
+import React from "react";
+import Header from "../Components/Header";
+import Project from "../Components/Project";
+import form from "../form.mp4";
+import formimg from "../reactForm.png";
+import todo from "../todo.mp4";
+import todoimg from "../todo.png";
+import stars from "../stars.mp4";
+import starsimg from "../starwars.png";
+import google from "../google.mp4";
+import googleimg from "../google.png";
+import insta from "../instagram.mp4";
+import udemy from "../udemy.mp4";
+import arrow from "../arrow.png";
+import Footer from "../Components/Footer";
 
 const Projects = () => {
-
-    const  renderArrowPrev = (onClickHandler, hasPrev, label) => {
-<button
-type="button"
-onClick={onClickHandler}>
-  <img src={left} />
-</button>;
-    }
-
-
   return (
-    <div className="bg-blue-centric h-full large:h-full text-eggshell flex flex-col">
+    <div className="bg-black h-full large:h-full text-white flex flex-col">
       <Header />
-      <div className="large:p-20 large:h-full  px-5 pt-16 h-full">
-        <Carousel
-          className="w-full pt-10 h-full flex"
-          useKeyboardArrows
-          showThumbs={false}
-          showStatus={false}
-          showIndicators={false}
-          showArrows={false}
-          autoPlay
-          infiniteLoop
-          dynamicHeight={true}
-        >
-          <div className="flex flex-col gap-8 large:gap-4 large:flex-row">
-            <Project
-              bg1={stars}
-              img1={browser}
-              img2={git}
-              title="Starwars Clone"
-              text="(React + CSS)"
-            />
-            <Project
-              bg1={todo}
-              img1={browser}
-              img2={git}
-              title="To-Do List App"
-              text="(HTML + CSS + JS)"
-            />
-          </div>
-          <div className="flex flex-col gap-8 large:gap-4 large:flex-row ">
-            <Project
-              bg1={udemy}
-              img1={browser}
-              img2={git}
-              title="Udemy Clone"
-              text="(HTML + CSS + JS)"
-            />
-            <Project
-              bg1={insta}
-              img1={browser}
-              img2={git}
-              title="Instagram Clone"
-              text="(HTML + CSS)"
-            />
-          </div>
-          <div className="flex flex-col gap-8 large:gap-4 large:flex-row ">
-            <Project
-              bg1={google}
-              img1={browser}
-              img2={git}
-              title="Google Search Clone"
-              text="(HTML + CSS)"
-            />
-            <Project
-              bg1={form}
-              img1={browser}
-              img2={git}
-              title="Contact Us Form"
-              text="(React + CSS)"
-            />
-          </div>
-        </Carousel>
+      <div className="large:mt-20 large:h-full w-3/5  px-5 py-16 grid grid-cols-2 gap-2 place-content-center justify-center m-auto">
+        <Project
+          bg1={stars}
+          img={arrow}
+          title="Starwars"
+          text="Cloned the starwars movie site page using React and CSS"
+        />
+        <Project
+          bg1={udemy}
+          img={arrow}
+          title="Udemy"
+          text="A Udemy landing page clone using HTML and CSS"
+        />
+        <Project
+          bg1={todo}
+          img={arrow}
+          title="To-Do List App"
+          text="Built a CRUD application with HTML, CSS and JavaScript."
+        />
+        <Project
+          bg1={insta}
+          img={arrow}
+          title="Instagram"
+          text="Cloned the Instagram web interface using HTML and Javascript"
+        />
+
+        <Project
+          bg1={google}
+          img={arrow}
+          title="Google"
+          text="Cloned the Google interface when you search for Lionel Messi using HTML and CSS"
+        />
+        <Project
+          bg1={form}
+          img={arrow}
+          title="Form"
+          text="Built a form that sends user data to an API endpoint"
+        />
       </div>
       {/* <Footer/> */}
     </div>
   );
-}
+};
 
-export default Projects
+export default Projects;
