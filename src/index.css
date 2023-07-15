@@ -5,3 +5,76 @@
 body {
     font-family: "Barlow";
 }
+
+.div {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.div {    /* For increasing performance
+                       ID/Class should've been used.
+                       For a small demo
+                       it's okaish for now */
+  animation: showup 5s ;
+}
+
+.type {
+  width:0px;
+  animation: reveal 4s ;
+}
+
+.typing {
+  animation: slidein 3s ;
+}
+
+.jump {
+    animation: jump-in .9s ease-in;
+}
+
+.slide {
+    animation: slide-in 1s ease-in;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+@keyframes jump-in {
+  0% {
+    transform: translateY(100%);
+  }
+  90% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

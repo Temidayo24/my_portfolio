@@ -7,7 +7,7 @@ export default withMT({
       width: {
         small: "12px",
         medium: "24px",
-        project: "95%"
+        project: "95%",
       },
 
       brightness: {
@@ -34,7 +34,8 @@ export default withMT({
       screen: "100vh",
       small: "20px",
       medium: "24px",
-      half: "45vh"
+      half: "45vh",
+      more: "60vh"
     },
 
     colors: {
@@ -48,7 +49,6 @@ export default withMT({
       laptop: "540px",
     },
   },
-
   keyframes: {
     wiggle: {
       "0%, 100%": { transform: "rotate(-15deg)" },
@@ -57,11 +57,18 @@ export default withMT({
     flip: {
       "0%, 80%": { transform: "rotateY(360deg)" },
     },
+    typing: {
+      from: {
+        width: "0",
+      },
+    },
   },
 
   animation: {
     wiggle: "wiggle 1s ease-in-out infinite",
     flip: "flip 2s infinite",
+    type: "typing 2s steps(13, end), blink-caret 0.5s step-end infinite alternate",
   },
+
   plugins: [],
 });

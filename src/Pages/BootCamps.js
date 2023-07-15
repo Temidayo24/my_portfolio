@@ -14,7 +14,7 @@ const BootCamps = () => {
     <div className="bg-black w-full m-0 text-coral h-screen flex flex-col">
       <Header />
       <div className="large:h-screen h-full large:flex-row flex flex-col justify-center items-center gap-8">
-        <ol className="text-eggshell large:pt-32 pt-24 flex flex-col gap-8 large:text-right text-center large:w-2/4">
+        <ol className="text-eggshell flex flex-col gap-8 large:text-right text-center large:w-2/4 jump">
           <li className="flex flex-col gap-3">
             <div>
               <h1 className="large:text-3xl text-2xl text-eggshell">
@@ -53,8 +53,7 @@ const BootCamps = () => {
             </Link>
           </li>
         </ol>
-        <hr className="border-s border-eggshell large:h-4/6 large:self-center" />
-        <div className="flex large:flex-col gap-4 justify-center large:w-2/4 ">
+        <div className="flex large:flex-col gap-4 justify-center large:w-2/4 slide">
           <Skills location={react} text="React" />
           <Skills location={tailwind} text="Tailwindcss" />
           <Skills location={html} text="HTML" />
@@ -62,6 +61,7 @@ const BootCamps = () => {
           <Skills location={git} text="Git" />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
