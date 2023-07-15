@@ -139,11 +139,11 @@ const Home = () => {
           scrolled ? "z-50 backdrop-blur-md" : ""
         }`}
       >
-        <div className="flex justify-between w-1/2">
+        <div className="flex justify-between items-center w-1/2">
           {dropdown ? (
             " "
           ) : (
-            <Link to="/" className="text-eggshell text-sm large:text-lg">
+            <Link to="/" className="text-eggshell text-sm large:text-md font-bold">
               Temidayo Kehinde
             </Link>
           )}
