@@ -265,11 +265,11 @@ const Home = () => {
       <div className="relative backdrop-blur-md" id="Project">
         {/* <div className="bg-coral absolute inset-0"></div> */}
         <div
-          className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-10 px-6 "
+          className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-10 px-6 justify-between "
           id="bootcamp"
         >
           <div className="text-center text-2xl  text-coral">Education .</div>
-          <div className="h-full large:flex-row flex flex-col justify-center gap-8">
+          <div className="h-full large:flex-row flex flex-col justify-center large:justify-end large:items-end gap-8">
             <ol className="text-eggshell flex large:flex-row flex-col gap-8 large:text-right text-center ">
               <li className="flex flex-col gap-3">
                 <div>
