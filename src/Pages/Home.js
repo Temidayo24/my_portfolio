@@ -33,11 +33,12 @@ import close from "../close.svg";
 
 const Dropdown = () => {
   return (
-    <div className="flex justify-between gap-6 font-bold mt-5 p-10  bg-eggshell h-screen items-start">
-      <div className="flex flex-col gap-6 font-bold text-xl">
+    <div className="flex justify-between gap-6 font-bold mt-5 p-5 w-full  bg-eggshell h-screen items-start">
+      <div className="flex flex-col gap-6 font-bold text-lg text-coral">
         <Link
           exact
           to="/"
+
           // style={({ isActive }) => ({
           //   color: isActive ? "#ff533d" : "#00301c",
           // })}
@@ -61,7 +62,7 @@ const Dropdown = () => {
           BootCamps & Skills
         </Link>
       </div>
-      <div className="flex flex-col p-5 justify-end items-center bg-coral gap-2">
+      <div className="flex flex-col p-4 justify-end items-center bg-coral gap-2">
         <Socials
           location={gitlogo}
           to="https://github.com/temidayo24"
@@ -109,15 +110,25 @@ const Home = () => {
       }
 
       // Calculate conditions for triggering transitions
+
       if (scrollPosition > 100) {
-        // Add CSS class to elements to trigger transitions
-        document.getElementById("bootcamp").classList.add("jump");
+        // Add CSS class to elements to trigger transitions for scroll position 2
+        document.getElementById("about").classList.add("jump");
       } else {
-        // Remove CSS class to reset transitions
-        document.getElementById("bootcamp").classList.remove("jump");
+        // Remove CSS class to reset transitions for scroll position 2
+        document.getElementById("about").classList.remove("jump");
       }
 
-      if (scrollPosition > 300) {
+      if (scrollPosition > 4000) {
+        // Add CSS class to elements to trigger transitions for scroll position 2
+        document.getElementById("education").classList.add("jump");
+      } else {
+        // Remove CSS class to reset transitions for scroll position 2
+        document.getElementById("education").classList.remove("jump");
+      }
+
+
+      if (scrollPosition > 500) {
         // Add CSS class to elements to trigger transitions for scroll position 2
         document.getElementById("project").classList.add("jump");
       } else {
@@ -139,53 +150,54 @@ const Home = () => {
           scrolled ? "z-50 backdrop-blur-md" : ""
         }`}
       >
-        <div className="flex justify-between items-center w-1/2">
-          {dropdown ? (
-            " "
-          ) : (
-            <Link to="/" className="text-eggshell text-sm large:text-md font-bold">
-              Temidayo Kehinde
-            </Link>
-          )}
-          <div className="large:flex gap-6 hidden text-sm font-bold">
-            <Link
-              to=""
-              // style={({ isActive }) => ({
-              //   color: isActive ? "#ff533d" : "#f5f5f5",
-              //   borderBottom: isActive ? "2px solid #ff533d" : "none",
-              // })}
-            >
-              Home
-            </Link>
-            <Link
-              to=""
-              activeClassName = "bg-coral"
-              // style={({ isActive }) => ({
-              //   color: isActive ? "#ff533d" : "#f5f5f5",
-              //   borderBottom: isActive ? "2px solid #ff533d" : "none",
-              // })}
-            >
-              About
-            </Link>
-            <Link
-              to="#Project"
-              // style={({ isActive }) => ({
-              //   color: isActive ? "#ff533d" : "#f5f5f5",
-              //   borderBottom: isActive ? "2px solid #ff533d" : "none",
-              // })}
-            >
-              Projects
-            </Link>
-            <Link
-              to="#education"
-              // style={({ isActive }) => ({
-              //   color: isActive ? "#ff533d" : "#f5f5f5",
-              //   borderBottom: isActive ? "2px solid #ff533d" : "none",
-              // })}
-            >
-              Education
-            </Link>
-          </div>
+        {dropdown ? (
+          " "
+        ) : (
+          <Link
+            to="/"
+            className="text-eggshell text-sm large:text-md font-bold"
+          >
+            Temidayo Kehinde
+          </Link>
+        )}
+        <div className="large:flex gap-6 hidden text-sm font-bold">
+          <Link
+            to=""
+            // style={({ isActive }) => ({
+            //   color: isActive ? "#ff533d" : "#f5f5f5",
+            //   borderBottom: isActive ? "2px solid #ff533d" : "none",
+            // })}
+          >
+            Home
+          </Link>
+          <Link
+            to=""
+            activeClassName="bg-coral"
+            // style={({ isActive }) => ({
+            //   color: isActive ? "#ff533d" : "#f5f5f5",
+            //   borderBottom: isActive ? "2px solid #ff533d" : "none",
+            // })}
+          >
+            About
+          </Link>
+          <Link
+            to="#Project"
+            // style={({ isActive }) => ({
+            //   color: isActive ? "#ff533d" : "#f5f5f5",
+            //   borderBottom: isActive ? "2px solid #ff533d" : "none",
+            // })}
+          >
+            Projects
+          </Link>
+          <Link
+            to="#education"
+            // style={({ isActive }) => ({
+            //   color: isActive ? "#ff533d" : "#f5f5f5",
+            //   borderBottom: isActive ? "2px solid #ff533d" : "none",
+            // })}
+          >
+            Education
+          </Link>
         </div>
         <div className="large:flex hidden justify-end items-center gap-2">
           <Socials
@@ -206,7 +218,7 @@ const Home = () => {
           onClick={handleClick}
           className={
             dropdown
-              ? "w-screen relative z-50"
+              ? "w-screen relative z-50 flex flex-col"
               : "flex flex-col gap-2 text-xl large:hidden items-end"
           }
         >
@@ -217,58 +229,122 @@ const Home = () => {
           {dropdown && <Dropdown />}
         </div>
       </div>
-      <div className="text-eggshell w-full h-full m-auto flex items-center h-screen" id="education">
-        <div className="flex large:flex-row-reverse flex-col gap-6 items-center justify-center pr-10 pl-2 large:px-0 ">
-          <img
-            src={img}
-            className="w-5/6 h-screen animate-wiggle hidden large:block slide self-center opacity-70 hover:opacity-100"
-          />
-          <div className="flex flex-col gap-4 justify-center">
-            <div className="flex flex-col justify-center ">
-              <p className="large:text-2xl text-xl flex-col w-full text-right">
-                <span className=" text-coral text-2xl large:text-3xl">
-                  {/* {texts[currentTextIndex]}{" "} */}
-                  Hi!
-                </span>
-                <br />
-                <span className="div">My name is </span>
-                <div className="type inline">
-                  <span className="text-coral large:text-5xl text-3xl typing">
-                    Temidayo Kehinde
+      <div
+        className="text-eggshell w-full h-full flex items-center justify-center large:h-screen"
+        id="home"
+      >
+        <div className="flex large:flex-row-reverse flex-col-reverse gap-6 items-center justify-center m-auto relative">
+          <div className="large:w-1/2 relative">
+            <img
+              src={img}
+              className="relative large:w-cards large:h-cards z-10 h-cards2 w-cards2 m-auto large:m-0 animate-wiggle slide opacity-70 hover:opacity-100"
+            />
+            <div className="large:h-cards large:w-cards h-cards2 w-cards2 z-0 bg-coral absolute top-[5%] left-[5%] border-2-coral"></div>
+          </div>
+          <div className="h-[85vh]  large:w-1/2  large:h-full flex pr-8 pl-2 large:px-0">
+            <div className="flex flex-col gap-4 self-center">
+              <div className="flex flex-col justify-items-center justify-self-center w-full h-full ">
+                <p className="large:text-2xl text-xl flex-col w-full text-right">
+                  <span className=" text-coral text-2xl large:text-3xl">
+                    {texts[currentTextIndex]}{" "}
                   </span>
-                </div>
-              </p>
-              <span className="large:text-xl text-sm text-right">
-                Front-End Web Developer{" "}
-                <img src={tag} className="inline large:w-10 pl-2 w-8" />
-              </span>
-            </div>
-            <div className="tracking-wide capitalize text-right w-5/6 large:text-lg flex flex-col gap-4 self-end">
-              <p className="text-right">
-                I am <span className="">passionate</span> about bridging the gap
-                between businesses and their customers by bringing{" "}
-                <span className=" "> user-friendly designs</span> to life using{" "}
-                <span className=""> codes.</span>
-              </p>
-              <p>
+                  <br />
+                  <span className="div">My name is </span>
+                  <div className="type inline">
+                    <span className="text-coral large:text-5xl text-3xl typing">
+                      Temidayo Kehinde
+                    </span>
+                  </div>
+                </p>
+                <span className="large:text-xl text-sm text-right">
+                  Front-End Web Developer{" "}
+                  <img src={tag} className="inline large:w-10 pl-2 w-8" />
+                </span>
+              </div>
+              <div className="tracking-wide capitalize text-right large:text-lg flex flex-col gap-2">
+                <p className="text-right">
+                  I am <span className="">passionate</span> about bridging the
+                  gap between businesses and their customers by bringing{" "}
+                  <span className=" "> user-friendly designs</span> to life
+                  using <span className=""> codes.</span>
+                </p>
+                <Link className="underline text-[16px]">
+                  Get to Know me better <img src="" />
+                </Link>
+                {/* <p>
                 <span className="">
                   Eating. <span className="text-eggshell">Coding. </span>{" "}
                   Singing.
                 </span>
                 <br />
                 ...These three things make me happy.
-              </p>
+              </p> */}
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="relative backdrop-blur-md" id="Project">
+      <div className="" id="about">
+        {/* <div className="bg-coral absolute inset-0"></div> */}
+        <div
+          className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-10 px-6 justify-between "
+          id=""
+        >
+          <div className="text-center text-2xl large:w-fit text-coral">
+            About me .
+          </div>
+          <div className="h-full large:flex-row flex flex-col justify-center large:justify-end large:items-end gap-8 ">
+            <div className="flex flex-col gap-2 text-justify large:text-lg">
+              <p className="text-justify">
+                Hi there! I'm thrilled to introduce myself and share my journey
+                with you. I may not have started with a STEM background, but I
+                stumbled upon the fascinating world of technology and instantly
+                fell in love.
+              </p>
+              <p className="text-justify">
+                During my learning journey, I've acquired a solid foundation in
+                various programming languages, such as HTML, CSS, and
+                JavaScript. I've also gained experience in frameworks and
+                libraries like React and TailwindCSS and also used can also
+                collaborate well on Git and GitHub. With every project I tackle,
+                I strive to improve my problem-solving skills and enhance my
+                ability to write clean and efficient code.
+              </p>
+              <p className="text-justify"></p>
+              <p className="text-justify">
+                My journey in the tech world has been nothing short of
+                thrilling. I've learned to code, experiment with various dev
+                tools, and stay updated with the latest trends and technologies.
+                But most importantly, I've discovered a passion that drives me
+                to continuously grow and explore new possibilities.
+              </p>
+              <p className="text-justify">
+                So, if you're looking for someone who can bring a fresh
+                perspective, combine technology and design seamlessly, and
+                create an enjoyable atmosphere, then I'm your person. Let's
+                embark on this exciting journey together and create something
+                remarkable!
+              </p>
+            </div>
+            {/* <div className="flex large:flex-col gap-4 large:w-2/4">
+              <Skills location={react} text="React" />
+              <Skills location={tailwind} text="Tailwindcss" />
+              <Skills location={html} text="HTML" />
+              <Skills location={css} text="CSS" />
+              <Skills location={git} text="Git" />
+            </div> */}
+          </div>
+        </div>
+      </div>
+      <div className=" " id="education">
         {/* <div className="bg-coral absolute inset-0"></div> */}
         <div
           className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-10 px-6 justify-between "
           id="bootcamp"
         >
-          <div className="text-center text-2xl  text-coral">Education .</div>
+          <div className="text-center large:w-fit text-2xl  text-coral">
+            Education .
+          </div>
           <div className="h-full large:flex-row flex flex-col justify-center large:justify-end large:items-end gap-8">
             <ol className="text-eggshell flex large:flex-row flex-col gap-8 large:text-right text-center ">
               <li className="flex flex-col gap-3">
@@ -325,9 +401,11 @@ const Home = () => {
       </div>
       <div
         id="project"
-        className="flex large:flex-row flex-col gap-8 large:px-6 large:pt-20 pt-10"
+        className="flex large:flex-row flex-col gap-8 large:px-6 large:pt-20 pt-10 "
       >
-        <div className="text-center  text-coral text-2xl">My Projects .</div>
+        <div className="text-center large:w-fit  text-coral text-2xl">
+          My Projects .
+        </div>
         <div className=" large:h-full large:w-4/5  w-project pb-16 grid large:grid-cols-2 large:gap-4 gap-4 place-content-center justify-center mx-auto">
           <Project
             to1="https://temi-starwars-app.netlify.app/"
