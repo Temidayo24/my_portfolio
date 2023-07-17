@@ -1,7 +1,7 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Typography, Button } from "@material-tailwind/react";
-import img from "./../IMG-8999.jpg";
+import img from "./../IMG-9518.jpg";
 import Project from "../Components/Project";
 import form from "../form.mp4";
 import todo from "../todo.mp4";
@@ -33,7 +33,7 @@ import close from "../close.svg";
 
 const Dropdown = () => {
   return (
-    <div className="flex justify-between gap-6 font-bold mt-5 p-5 w-full  bg-eggshell h-screen items-start">
+    <div className="flex justify-between gap-6 font-bold p-5 w-full  bg-eggshell h-screen items-start ">
       <div className="flex flex-col gap-6 font-bold text-lg text-coral">
         <Link
           exact
@@ -218,19 +218,20 @@ const Home = () => {
           onClick={handleClick}
           className={
             dropdown
-              ? "w-screen relative z-50 flex flex-col"
-              : "flex flex-col gap-2 text-xl large:hidden items-end"
+              ? "w-screen flex flex-col gap-4"
+              : "text-xl large:hidden items-end"
           }
         >
           <img
             src={dropdown ? close : menu}
             className="w-8  self-end justify-end"
+            onClick={handleClick}
           />
           {dropdown && <Dropdown />}
         </div>
       </div>
       <div
-        className="text-eggshell w-full h-full flex items-center justify-center large:h-screen"
+        className="text-eggshell w-full h-full flex items-center justify-center large:h-screen mt-20 large:mt-0"
         id="home"
       >
         <div className="flex large:flex-row-reverse flex-col-reverse gap-6 items-center justify-center m-auto relative">
@@ -241,7 +242,7 @@ const Home = () => {
             />
             <div className="large:h-cards large:w-cards h-cards2 w-cards2 z-0 bg-coral absolute top-[5%] left-[5%] border-2-coral"></div>
           </div>
-          <div className="h-[85vh]  large:w-1/2  large:h-full flex pr-8 pl-2 large:px-0">
+          <div className="h-[70vh]  large:w-1/2  large:h-full flex pr-8 pl-2 large:px-0">
             <div className="flex flex-col gap-4 self-center">
               <div className="flex flex-col justify-items-center justify-self-center w-full h-full ">
                 <p className="large:text-2xl text-xl flex-col w-full text-right">
@@ -249,7 +250,7 @@ const Home = () => {
                     {texts[currentTextIndex]}{" "}
                   </span>
                   <br />
-                  <span className="div">My name is </span>
+                  <span className="text-[14px]">My name is </span>
                   <div className="type inline">
                     <span className="text-coral large:text-5xl text-3xl typing">
                       Temidayo Kehinde
@@ -285,15 +286,14 @@ const Home = () => {
         </div>
       </div>
       <div className="" id="about">
-        {/* <div className="bg-coral absolute inset-0"></div> */}
         <div
-          className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-10 px-6 justify-between "
+          className=" flex large:flex-row flex-col h-full pt-16 pb-10 px-6 justify-between "
           id=""
         >
-          <div className="text-center text-2xl large:w-fit text-coral">
+          <div className="large:text-start text-center large:text-5xl text-2xl large:w-[30vw] text-coral">
             About me .
           </div>
-          <div className="h-full large:flex-row flex flex-col justify-center large:justify-end large:items-end gap-8 ">
+          <div className="h-full large:flex-row flex flex-col justify-center large:items-end gap-8 large:w-[70vw]">
             <div className="flex flex-col gap-2 text-justify large:text-lg">
               <p className="text-justify">
                 Hi there! I'm thrilled to introduce myself and share my journey
@@ -342,11 +342,11 @@ const Home = () => {
           className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-10 px-6 justify-between "
           id="bootcamp"
         >
-          <div className="text-center large:w-fit text-2xl  text-coral">
+          <div className="large:text-start text-center large:text-5xl text-2xl large:w-[30vw] text-coral">
             Education .
           </div>
           <div className="h-full large:flex-row flex flex-col justify-center large:justify-end large:items-end gap-8">
-            <ol className="text-eggshell flex large:flex-row flex-col gap-8 large:text-right text-center ">
+            <ol className="text-eggshell flex large:flex-row flex-col gap-8 large:gap-0 large:justify-between large:text-left text-center ">
               <li className="flex flex-col gap-3">
                 <div>
                   <h1 className="large:text-3xl text-2xl text-eggshell">
@@ -403,7 +403,7 @@ const Home = () => {
         id="project"
         className="flex large:flex-row flex-col gap-8 large:px-6 large:pt-20 pt-10 "
       >
-        <div className="text-center large:w-fit  text-coral text-2xl">
+        <div className="large:text-start text-center large:text-5xl text-2xl large:w-[30vw] text-coral">
           My Projects .
         </div>
         <div className=" large:h-full large:w-4/5  w-project pb-16 grid large:grid-cols-2 large:gap-4 gap-4 place-content-center justify-center mx-auto">
