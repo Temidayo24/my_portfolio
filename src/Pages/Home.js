@@ -119,13 +119,13 @@ const Home = () => {
         document.getElementById("about").classList.remove("jump");
       }
 
-      if (scrollPosition > 4000) {
-        // Add CSS class to elements to trigger transitions for scroll position 2
-        document.getElementById("education").classList.add("jump");
-      } else {
-        // Remove CSS class to reset transitions for scroll position 2
-        document.getElementById("education").classList.remove("jump");
-      }
+      // if (scrollPosition > 400) {
+      //   // Add CSS class to elements to trigger transitions for scroll position 2
+      //   document.getElementById("education").classList.add("jump");
+      // } else {
+      //   // Remove CSS class to reset transitions for scroll position 2
+      //   document.getElementById("education").classList.remove("jump");
+      // }
 
 
       if (scrollPosition > 500) {
@@ -231,7 +231,7 @@ const Home = () => {
         </div>
       </div>
       <div
-        className="text-eggshell w-full h-full flex items-center justify-center large:h-screen mt-20 large:mt-0"
+        className="text-eggshell w-full h-full flex items-center justify-center large:h-screen mt-20 large:mt-0 large:px-[10%]"
         id="home"
       >
         <div className="flex large:flex-row-reverse flex-col-reverse gap-6 items-center justify-center m-auto relative">
@@ -287,7 +287,7 @@ const Home = () => {
       </div>
       <div className="" id="about">
         <div
-          className=" flex large:flex-row flex-col h-full pt-16 pb-10 px-6 justify-between "
+          className=" flex large:flex-row flex-col h-full pt-16 pb-10 px-[10%] justify-between"
           id=""
         >
           <div className="large:text-start text-center large:text-5xl text-2xl large:w-[30vw] text-coral">
@@ -336,10 +336,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className=" " id="education">
-        {/* <div className="bg-coral absolute inset-0"></div> */}
+       {/* <div className=" " id="education">
+        <div className="bg-coral absolute inset-0"></div>
         <div
-          className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-10 px-6 justify-between "
+          className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-[10%] px-6 justify-between "
           id="bootcamp"
         >
           <div className="large:text-start text-center large:text-5xl text-2xl large:w-[30vw] text-coral">
@@ -389,24 +389,24 @@ const Home = () => {
                 </Link>
               </li>
             </ol>
-            {/* <div className="flex large:flex-col gap-4 large:w-2/4">
+            <div className="flex large:flex-col gap-4 large:w-2/4">
               <Skills location={react} text="React" />
               <Skills location={tailwind} text="Tailwindcss" />
               <Skills location={html} text="HTML" />
               <Skills location={css} text="CSS" />
               <Skills location={git} text="Git" />
-            </div> */}
+            </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div
         id="project"
-        className="flex large:flex-row flex-col gap-8 large:px-6 large:pt-20 pt-10 "
+        className="flex large:flex-row flex-col gap-8 large:gap-0 large:px-[10%] large:pt-20 pt-10 "
       >
         <div className="large:text-start text-center large:text-5xl text-2xl large:w-[30vw] text-coral">
           My Projects .
         </div>
-        <div className=" large:h-full large:w-4/5  w-project pb-16 grid large:grid-cols-2 large:gap-4 gap-4 place-content-center justify-center mx-auto">
+        <div className=" large:h-full  w-project pb-16 grid large:grid-cols-2 large:gap-4 gap-4 place-content-center justify-center mx-auto">
           <Project
             to1="https://temi-starwars-app.netlify.app/"
             to2="https://github.com/Temidayo24/StarwarsReactProject-Stutern"
