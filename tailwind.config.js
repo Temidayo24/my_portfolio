@@ -45,7 +45,7 @@ export default withMT({
     colors: {
       "blue-centric": "#E6E6E6",
       coral: "#ff533d",
-      eggshell: "#f5f5f5",
+      eggshell: "#ffffff",
       leather: "#fee8b0",
     },
     screens: {
