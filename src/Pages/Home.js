@@ -242,7 +242,7 @@ const Home = () => {
             />
             <div className="large:h-cards large:w-cards h-cards2 w-cards2 z-0 bg-coral absolute top-[5%] left-[5%] border-2-coral"></div>
           </div>
-          <div className="h-[70vh]  large:w-1/2  large:h-full flex pr-8 pl-2 large:px-0">
+          <div className="h-[60vh]  large:w-1/2  large:h-full flex pr-8 pl-2 large:px-0">
             <div className="flex flex-col gap-4 self-center">
               <div className="flex flex-col justify-items-center justify-self-center w-full h-full ">
                 <p className="large:text-2xl text-xl flex-col w-full text-right">
