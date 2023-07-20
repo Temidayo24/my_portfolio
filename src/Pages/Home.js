@@ -1,7 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { Typography, Button } from "@material-tailwind/react";
-import img from "./../IMG-9518.jpg";
+import img from "./../IMG-9523.JPG";
 import Project from "../Components/Project";
 import form from "../form.mp4";
 import todo from "../todo.mp4";
@@ -16,6 +15,7 @@ import tailwind from "./../tailwind.png";
 import html from "./../html-5.png";
 import css from "./../css-3.png";
 import react from "./../react.png";
+import down from "./../down.png";
 import Skills from "../Components/Skills";
 import tag from "../closetag.png";
 import { Link } from "react-router-dom";
@@ -127,7 +127,6 @@ const Home = () => {
       //   document.getElementById("education").classList.remove("jump");
       // }
 
-
       if (scrollPosition > 500) {
         // Add CSS class to elements to trigger transitions for scroll position 2
         document.getElementById("project").classList.add("jump");
@@ -145,6 +144,7 @@ const Home = () => {
 
   return (
     <div className="bg-black w-full m-0 text-eggshell h-full relative flex flex-col gap-0 ">
+      {/* Header Section */}
       <div
         className={`flex justify-between px-4 py-4 text-eggshell large:text-base fixed w-full z-100 ${
           scrolled ? "z-50 backdrop-blur-md" : ""
@@ -230,15 +230,22 @@ const Home = () => {
           {dropdown && <Dropdown />}
         </div>
       </div>
+      {/* End of Header Section */}
+
+      {/* Home Section */}
       <div
-        className="text-eggshell w-full h-full flex items-center justify-center large:h-screen mt-20 large:mt-0 large:px-[10%]"
+        className={
+          dropdown
+            ? "hidden"
+            : "text-eggshell w-full h-full flex items-center justify-center large:h-screen mt-20 large:mt-0 large:px-[10%]"
+        }
         id="home"
       >
         <div className="flex large:flex-row-reverse flex-col-reverse gap-6 items-center justify-center m-auto relative">
           <div className="large:w-1/2 relative">
             <img
               src={img}
-              className="relative large:w-cards large:h-cards z-10 h-cards2 w-cards2 m-auto large:m-0 animate-wiggle slide opacity-70 hover:opacity-100"
+              className="relative large:w-cards large:h-cards z-10 h-cards2 w-cards2 m-auto large:m-0 animate-wiggle slide opacity-70 hover:opacity-100 border-sm border-coral"
             />
             <div className="large:h-cards large:w-cards h-cards2 w-cards2 z-0 bg-coral absolute top-[5%] left-[5%] border-2-coral"></div>
           </div>
@@ -263,14 +270,15 @@ const Home = () => {
                 </span>
               </div>
               <div className="tracking-wide capitalize text-right large:text-lg flex flex-col gap-2">
-                <p className="text-right">
+                <p className="text-right w-[90%] self-end justify-right">
                   I am <span className="">passionate</span> about bridging the
                   gap between businesses and their customers by bringing{" "}
                   <span className=" "> user-friendly designs</span> to life
                   using <span className=""> codes.</span>
                 </p>
-                <Link className="underline text-[16px]">
-                  Get to Know me better <img src="" />
+                <Link className="underline text-[16px] flex justify-right self-end">
+                  <span>Get to Know me better</span>{" "}
+                  <img src={down} className="animate-bounce w-[24px]" />
                 </Link>
                 {/* <p>
                 <span className="">
@@ -285,6 +293,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* End of Home Section */}
+
+      {/* About Section */}
       <div className="" id="about">
         <div
           className=" flex large:flex-row flex-col h-full pt-16 pb-10 px-[10%] justify-between"
@@ -326,17 +337,39 @@ const Home = () => {
                 remarkable!
               </p>
             </div>
-            {/* <div className="flex large:flex-col gap-4 large:w-2/4">
-              <Skills location={react} text="React" />
-              <Skills location={tailwind} text="Tailwindcss" />
-              <Skills location={html} text="HTML" />
-              <Skills location={css} text="CSS" />
-              <Skills location={git} text="Git" />
-            </div> */}
           </div>
         </div>
       </div>
-       {/* <div className=" " id="education">
+      {/* End of About Section */}
+
+      {/* Skills Section */}
+      <div className="flex large:flex-col gap-4 large:w-2/4  bg-coral align-center justify-center w-full pt-[15px] pb-[5px]">
+        <Skills location={react} text="React" />
+        <Skills location={tailwind} text="Tailwind" />
+        <Skills location={html} text="HTML" />
+        <Skills location={css} text="CSS" />
+        <Skills location={git} text="Git" />
+      </div>
+      {/*
+      <Carousel
+        infiniteLoop={true}
+        autoPlay={true}
+        autoLoop={true}
+        showArrows={false}
+        showIndicators={false}
+        showStatus={false}
+        className="flex large:flex-col gap-4 large:w-2/4 bg-coral align-center justify-center w-full"
+      >
+        <Skills location={react} text="React" />
+        <Skills location={tailwind} text="Tailwindcss" />
+        <Skills location={html} text="HTML" />
+        <Skills location={css} text="CSS" />
+        <Skills location={git} text="Git" />
+      </Carousel> */}
+
+      {/* End of Skills Section */}
+
+      {/* <div className=" " id="education">
         <div className="bg-coral absolute inset-0"></div>
         <div
           className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-[10%] px-6 justify-between "
@@ -399,6 +432,8 @@ const Home = () => {
           </div>
         </div>
       </div> */}
+
+      {/* Project section */}
       <div
         id="project"
         className="flex large:flex-row flex-col gap-8 large:gap-0 large:px-[10%] large:pt-20 pt-10 "
@@ -465,7 +500,7 @@ const Home = () => {
           />
         </div>
       </div>
-
+      {/* End of Project Section */}
       <Footer />
     </div>
   );

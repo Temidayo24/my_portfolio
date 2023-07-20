@@ -14,13 +14,13 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2 }) => {
     <div className="large:h-more h-half w-full flex flex-row gap-2 border-sm border-eggshell overflow-hidden rounded-corners large:gap-6 hover:scale-y-105 ease-in-out">
       <div className="relative large:h-full h-96 group ">
         <div className="group relative w-full h-full transition-all group-hover:opacity-40 bg-eggshell ">
-          <video ref={videoRef} onClick={handleVideoPlay} muted autoPlay loop className="overflow-hidden">
+          <video ref={videoRef} onClick={handleVideoPlay} muted autoPlay loop className="overflow-hidden ">
             <source src={bg1} type="video/mp4" />
           </video>
           <img
             src={bg2}
             alt={alt1}
-            className="h-full w-fit transition-opacity group-hover:opacity-50"
+            className="h-96 w-96 transition-opacity group-hover:opacity-50 hidden"
           />
         </div>
         <div className="hidden group-hover:block absolute z-100 left-1/2 bottom-0 -translate-x-1/2 -translate-y-1/2 top-1/2 w-full text-eggshell overflow-hidden transition-all delay-300">
