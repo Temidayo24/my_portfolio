@@ -197,8 +197,8 @@ const Home = () => {
         }
         id="home"
       >
-        <div className="flex large:flex-row-reverse flex-col-reverse large:gap-6 items-center justify-center m-auto relative">
-          <div className="large:w-1/2 relative">
+        <div className="flex large:flex-row-reverse flex-col-reverse large:gap-6 gap-0 items-center justify-center m-auto relative h-[100vh] large:h-full">
+          <div className="large:w-1/2 relative h-[46vh] large:h-[60vh]">
             <img
               src={img}
               className="relative large:w-cards large:h-cards z-10 h-cards2 w-cards2 m-auto large:m-0 animate-wiggle slide opacity-70 hover:opacity-100 border-sm border-coral"
@@ -260,57 +260,56 @@ const Home = () => {
         }
         id="about"
       >
-          <div className="flex large:flex-col gap-[6px] large:text-start text-center large:text-[80px] text-2xl large:w-fit text-black font-['Poppins'] font-bold">
-            <span>About</span>
-            <span>Me .</span>
+        <div className="flex large:flex-col gap-[6px] large:text-start text-center large:text-[80px] text-2xl large:w-fit text-black font-['Poppins'] font-bold">
+          <span>About</span>
+          <span>Me .</span>
+        </div>
+        <div className="h-full large:flex-row flex flex-col gap-8 large:w-[60vw] text-black font-bold">
+          <div className="flex flex-col gap-2 text-justify large:text-lg">
+            <p className="text-justify">
+              Hi there! I'm thrilled to introduce myself and share my journey
+              with you. I may not have started with a STEM background, but I
+              stumbled upon the fascinating world of technology and instantly
+              fell in love.
+            </p>
+            <p className="text-justify">
+              During my learning journey, I've acquired a solid foundation in
+              various programming languages, such as{" "}
+              <span className="text-coral font-bold">HTML</span>,{" "}
+              <span className="text-coral font-bold">CSS</span>, and
+              <span className="text-coral font-bold"> JavaScript</span>. I've
+              also gained experience in frameworks and libraries like{" "}
+              <span className="text-coral font-bold">React</span> and
+              <span className="text-coral font-bold"> TailwindCSS</span> and can
+              also collaborate well on Git and GitHub. With every project I
+              tackle, I strive to improve my problem-solving skills and enhance
+              my ability to write clean and efficient code.
+            </p>
+            <p className="text-justify"></p>
+            <p className="text-justify">
+              My journey in the tech world has been nothing short of thrilling.
+              I've learned to code, experiment with various dev tools, and stay
+              updated with the latest trends and technologies. But most
+              importantly, I've discovered a passion that drives me to
+              continuously grow and explore new possibilities.
+            </p>
+            <p className="text-justify">
+              So, if you're looking for someone who can bring a fresh
+              perspective, combine technology and design seamlessly, and create
+              an enjoyable atmosphere, then I'm your person. Let's embark on
+              this exciting journey together and create something remarkable!
+            </p>
           </div>
-          <div className="h-full large:flex-row flex flex-col gap-8 large:w-[60vw] text-black font-bold">
-            <div className="flex flex-col gap-2 text-justify large:text-lg">
-              <p className="text-justify">
-                Hi there! I'm thrilled to introduce myself and share my journey
-                with you. I may not have started with a STEM background, but I
-                stumbled upon the fascinating world of technology and instantly
-                fell in love.
-              </p>
-              <p className="text-justify">
-                During my learning journey, I've acquired a solid foundation in
-                various programming languages, such as{" "}
-                <span className="text-coral font-bold">HTML</span>,{" "}
-                <span className="text-coral font-bold">CSS</span>, and
-                <span className="text-coral font-bold"> JavaScript</span>. I've
-                also gained experience in frameworks and libraries like{" "}
-                <span className="text-coral font-bold">React</span> and
-                <span className="text-coral font-bold"> TailwindCSS</span> and
-                can also collaborate well on Git and GitHub. With every project
-                I tackle, I strive to improve my problem-solving skills and
-                enhance my ability to write clean and efficient code.
-              </p>
-              <p className="text-justify"></p>
-              <p className="text-justify">
-                My journey in the tech world has been nothing short of
-                thrilling. I've learned to code, experiment with various dev
-                tools, and stay updated with the latest trends and technologies.
-                But most importantly, I've discovered a passion that drives me
-                to continuously grow and explore new possibilities.
-              </p>
-              <p className="text-justify">
-                So, if you're looking for someone who can bring a fresh
-                perspective, combine technology and design seamlessly, and
-                create an enjoyable atmosphere, then I'm your person. Let's
-                embark on this exciting journey together and create something
-                remarkable!
-              </p>
-            </div>
-            <div className="flex large:flex-col gap-[2px] large:w-2/4  align-center justify-center large:self-start w-full pt-[15px] pb-[5px]">
-              <Skills location={react} />
-              <Skills location={tailwind} />
-              <Skills location={html}  />
-              <Skills location={css} />
-              <Skills location={git} />
-              <Skills location={js} />
-              <Skills location={code} />
-            </div>
+          <div className="flex large:flex-col gap-[2px] large:w-2/4  align-center justify-center large:self-start w-full pt-[15px] pb-[5px]">
+            <Skills location={html} />
+            <Skills location={css} />
+            <Skills location={js} />
+            <Skills location={react} />
+            <Skills location={tailwind} />
+            <Skills location={code} />
+            <Skills location={git} />
           </div>
+        </div>
       </div>
       {/* End of About Section */}
 
@@ -330,8 +329,8 @@ const Home = () => {
               to2="https://github.com/Temidayo24/StarwarsReactProject-Stutern"
               bg1={loanwise}
               img={arrow}
-              title="Starwars"
-              text="Cloned the starwars movie site page using React and CSS"
+              title="LoanWise App"
+              text="Collaborated with a team of developers and data scientists to build a loan prediction application."
             />
             <Project
               to1="https://temi-starwars-app.netlify.app/"

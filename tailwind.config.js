@@ -32,7 +32,7 @@ export default withMT({
 
     height: {
       cards: "400px",
-      cards2: "250px",
+      cards2: "300px",
       fit: "398px",
       screen: "100vh",
       small: "20px",
