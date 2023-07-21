@@ -9,6 +9,7 @@ import google from "../google.mp4";
 import insta from "../instagram.mp4";
 import udemy from "../udemy.mp4";
 import netflix from "../netflix.mp4";
+import loanwise from "../loanwise.mp4"
 import arrow from "../arrow.png";
 import git from "./../git.png";
 import tailwind from "./../tailwind.png";
@@ -30,49 +31,21 @@ import mail from "../email.png";
 import call from "../call.png";
 import menu from "../menu.png";
 import close from "../close.svg";
+import { HashLink, NavHashLink } from "react-router-hash-link";
+import Nav from "../Components/Nav";
 
 const Dropdown = () => {
   return (
     <div className="flex justify-between gap-6 font-bold p-5 w-full  bg-eggshell h-screen items-start ">
       <div className="flex flex-col gap-6 font-bold text-lg text-coral">
-        <Link
-          exact
-          to="/"
-
-          // style={({ isActive }) => ({
-          //   color: isActive ? "#ff533d" : "#00301c",
-          // })}
-        >
-          Home
-        </Link>
-        <Link
-          to="/my_projects"
-          // style={({ isActive }) => ({
-          //   color: isActive ? "#ff533d" : "#00301c",
-          // })}
-        >
-          Projects
-        </Link>
-        <Link
-          to="/bootCamps"
-          // style={({ isActive }) => ({
-          //   color: isActive ? "#ff533d" : "#00301c",
-          // })}
-        >
-          BootCamps & Skills
-        </Link>
+        <Nav text="Home" to="/#home" />
+        <Nav text="About" to="/#about" />
+        <Nav text="Projects" to="/#project" />
+        <Nav text="Contact" to="/#contact" />
       </div>
       <div className="flex flex-col p-4 justify-end items-center bg-coral gap-2">
-        <Socials
-          location={gitlogo}
-          to="https://github.com/temidayo24"
-          alt="github"
-        />
-        <Socials
-          location={linkedin}
-          to="https://www.linkedin.com/temidayokehinde"
-          alt="linkedin"
-        />
+        <Socials location={gitlogo} to="https://github.com/temidayo24" alt="github"/>
+        <Socials location={linkedin} to="https://www.linkedin.com/temidayokehinde" alt="linkedin"/>
         <Socials location={twitter} to="/git" alt="twitter" />
         <Socials location={mail} to="/git" alt="mail" />
         <Socials location={call} to="/git" alt="call" />
@@ -146,8 +119,8 @@ const Home = () => {
     <div className="bg-black w-full m-0 text-eggshell h-full relative flex flex-col gap-0 ">
       {/* Header Section */}
       <div
-        className={`flex justify-between px-4 py-4 text-eggshell large:text-base fixed w-full z-100 ${
-          scrolled ? "z-50 backdrop-blur-md" : ""
+        className={`flex justify-between px-4 py-4 text-eggshell font-bold large:text-[1.1em] fixed w-full z-100 ${
+          scrolled ? "z-50 bg-coral" : ""
         }`}
       >
         {dropdown ? (
@@ -160,44 +133,11 @@ const Home = () => {
             Temidayo Kehinde
           </Link>
         )}
-        <div className="large:flex gap-6 hidden text-sm font-bold">
-          <Link
-            to=""
-            // style={({ isActive }) => ({
-            //   color: isActive ? "#ff533d" : "#f5f5f5",
-            //   borderBottom: isActive ? "2px solid #ff533d" : "none",
-            // })}
-          >
-            Home
-          </Link>
-          <Link
-            to=""
-            activeClassName="bg-coral"
-            // style={({ isActive }) => ({
-            //   color: isActive ? "#ff533d" : "#f5f5f5",
-            //   borderBottom: isActive ? "2px solid #ff533d" : "none",
-            // })}
-          >
-            About
-          </Link>
-          <Link
-            to="#Project"
-            // style={({ isActive }) => ({
-            //   color: isActive ? "#ff533d" : "#f5f5f5",
-            //   borderBottom: isActive ? "2px solid #ff533d" : "none",
-            // })}
-          >
-            Projects
-          </Link>
-          <Link
-            to="#education"
-            // style={({ isActive }) => ({
-            //   color: isActive ? "#ff533d" : "#f5f5f5",
-            //   borderBottom: isActive ? "2px solid #ff533d" : "none",
-            // })}
-          >
-            Education
-          </Link>
+        <div className="large:flex gap-6 hidden font-bold">
+          <Nav text="Home" to="/#home" />
+          <Nav text="About" to="/#about" />
+          <Nav text="Projects" to="/#project" />
+          <Nav text="Contact" to="/#contact" />
         </div>
         <div className="large:flex hidden justify-end items-center gap-2">
           <Socials
@@ -207,7 +147,7 @@ const Home = () => {
           />
           <Socials
             location={linkedin}
-            to="www.linkedin.com/temidayokehinde"
+            to="https://www.linkedin.com/temidayokehinde"
             alt="linkedin"
           />
           <Socials location={twitter} to="/git" alt="twitter" />
@@ -241,13 +181,13 @@ const Home = () => {
         }
         id="home"
       >
-        <div className="flex large:flex-row-reverse flex-col-reverse gap-6 items-center justify-center m-auto relative">
+        <div className="flex large:flex-row-reverse flex-col-reverse large:gap-6 items-center justify-center m-auto relative">
           <div className="large:w-1/2 relative">
             <img
               src={img}
               className="relative large:w-cards large:h-cards z-10 h-cards2 w-cards2 m-auto large:m-0 animate-wiggle slide opacity-70 hover:opacity-100 border-sm border-coral"
             />
-            <div className="large:h-cards large:w-cards h-cards2 w-cards2 z-0 bg-coral absolute top-[5%] left-[5%] border-2-coral"></div>
+            <div className="large:h-cards large:w-cards h-cards2 w-cards2 z-0 bg-coral absolute top-[5%] left-[5%] border-white border-sm"></div>
           </div>
           <div className="h-[60vh]  large:w-1/2  large:h-full flex pr-8 pl-2 large:px-0">
             <div className="flex flex-col gap-4 self-center">
@@ -298,13 +238,14 @@ const Home = () => {
       {/* About Section */}
       <div className="" id="about">
         <div
-          className=" flex large:flex-row flex-col h-full pt-16 pb-10 px-[10%] justify-between"
+          className="bg-eggshell flex large:flex-row flex-col h-full pt-16 pb-10 px-[5%] justify-between"
           id=""
         >
-          <div className="large:text-start text-center large:text-5xl text-2xl large:w-[30vw] text-coral">
-            About me .
+          <div className="flex large:flex-col gap-[6px] large:text-start text-center large:text-[80px] text-2xl large:w-fit text-black font-['Poppins'] font-bold">
+            <span>About</span>
+            <span>Me .</span>
           </div>
-          <div className="h-full large:flex-row flex flex-col justify-center large:items-end gap-8 large:w-[70vw]">
+          <div className="h-full large:flex-row flex flex-col justify-center gap-8 large:w-[60vw] text-black font-bold">
             <div className="flex flex-col gap-2 text-justify large:text-lg">
               <p className="text-justify">
                 Hi there! I'm thrilled to introduce myself and share my journey
@@ -314,12 +255,16 @@ const Home = () => {
               </p>
               <p className="text-justify">
                 During my learning journey, I've acquired a solid foundation in
-                various programming languages, such as HTML, CSS, and
-                JavaScript. I've also gained experience in frameworks and
-                libraries like React and TailwindCSS and also used can also
-                collaborate well on Git and GitHub. With every project I tackle,
-                I strive to improve my problem-solving skills and enhance my
-                ability to write clean and efficient code.
+                various programming languages, such as{" "}
+                <span className="text-coral font-bold">HTML</span>,{" "}
+                <span className="text-coral font-bold">CSS</span>, and
+                <span className="text-coral font-bold"> JavaScript</span>. I've
+                also gained experience in frameworks and libraries like{" "}
+                <span className="text-coral font-bold">React</span> and
+                <span className="text-coral font-bold"> TailwindCSS</span> and
+                can also collaborate well on Git and GitHub. With every project
+                I tackle, I strive to improve my problem-solving skills and
+                enhance my ability to write clean and efficient code.
               </p>
               <p className="text-justify"></p>
               <p className="text-justify">
@@ -337,167 +282,94 @@ const Home = () => {
                 remarkable!
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-      {/* End of About Section */}
-
-      {/* Skills Section */}
-      <div className="flex large:flex-col gap-4 large:w-2/4  bg-coral align-center justify-center w-full pt-[15px] pb-[5px]">
-        <Skills location={react} text="React" />
-        <Skills location={tailwind} text="Tailwind" />
-        <Skills location={html} text="HTML" />
-        <Skills location={css} text="CSS" />
-        <Skills location={git} text="Git" />
-      </div>
-      {/*
-      <Carousel
-        infiniteLoop={true}
-        autoPlay={true}
-        autoLoop={true}
-        showArrows={false}
-        showIndicators={false}
-        showStatus={false}
-        className="flex large:flex-col gap-4 large:w-2/4 bg-coral align-center justify-center w-full"
-      >
-        <Skills location={react} text="React" />
-        <Skills location={tailwind} text="Tailwindcss" />
-        <Skills location={html} text="HTML" />
-        <Skills location={css} text="CSS" />
-        <Skills location={git} text="Git" />
-      </Carousel> */}
-
-      {/* End of Skills Section */}
-
-      {/* <div className=" " id="education">
-        <div className="bg-coral absolute inset-0"></div>
-        <div
-          className=" flex large:flex-row flex-col gap-8 h-full pt-16 pb-[10%] px-6 justify-between "
-          id="bootcamp"
-        >
-          <div className="large:text-start text-center large:text-5xl text-2xl large:w-[30vw] text-coral">
-            Education .
-          </div>
-          <div className="h-full large:flex-row flex flex-col justify-center large:justify-end large:items-end gap-8">
-            <ol className="text-eggshell flex large:flex-row flex-col gap-8 large:gap-0 large:justify-between large:text-left text-center ">
-              <li className="flex flex-col gap-3">
-                <div>
-                  <h1 className="large:text-3xl text-2xl text-eggshell">
-                    Intro to Programming
-                  </h1>
-                  <span className="text-coral">Udacity | access </span>
-                </div>
-                <Link className="underline italic text-eggshell text-md">
-                  Certification in progress
-                </Link>
-              </li>
-              <li className="flex flex-col gap-3">
-                <div>
-                  <h1 className="large:text-3xl text-2xl text-eggshell">
-                    Software Development{" "}
-                  </h1>
-                  <span className="text-coral">
-                    Stutern | Ingressive for Good{" "}
-                  </span>
-                </div>
-                <Link className="underline italic text-eggshell text-l">
-                  Click to see certification
-                </Link>
-              </li>
-              <li className="flex flex-col gap-3">
-                <div>
-                  <h1 className="large:text-3xl text-2xl text-eggshell">
-                    Frontend (HTML/CSS/JavaScript)
-                  </h1>
-                  <span className="text-coral">
-                    Zuri | Ingressive for Good{" "}
-                  </span>
-                </div>
-                <Link
-                  to="https://w2pp.zuriboard.com/dashboard/certificate/41b6c30f-47f9-43b5-a166-cba3ff9849e2"
-                  target="_blank"
-                  className="underline italic text-eggshell text-l"
-                >
-                  Click to see certification
-                </Link>
-              </li>
-            </ol>
-            <div className="flex large:flex-col gap-4 large:w-2/4">
+            <div className="flex large:flex-col gap-4 large:w-2/4  align-center justify-center w-full pt-[15px] pb-[5px]">
               <Skills location={react} text="React" />
-              <Skills location={tailwind} text="Tailwindcss" />
+              <Skills location={tailwind} text="Tailwind" />
               <Skills location={html} text="HTML" />
               <Skills location={css} text="CSS" />
               <Skills location={git} text="Git" />
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+      {/* End of About Section */}
 
       {/* Project section */}
-      <div
-        id="project"
-        className="flex large:flex-row flex-col gap-8 large:gap-0 large:px-[10%] large:pt-20 pt-10 "
-      >
-        <div className="large:text-start text-center large:text-5xl text-2xl large:w-[30vw] text-coral">
-          My Projects .
-        </div>
-        <div className=" large:h-full  w-project pb-16 grid large:grid-cols-2 large:gap-4 gap-4 place-content-center justify-center mx-auto">
-          <Project
-            to1="https://temi-starwars-app.netlify.app/"
-            to2="https://github.com/Temidayo24/StarwarsReactProject-Stutern"
-            bg1={stars}
-            img={arrow}
-            title="Starwars"
-            text="Cloned the starwars movie site page using React and CSS"
-          />
-          <Project
-            to1="https://temiudemyclonesite.netlify.app/"
-            to2="https://github.com/Temidayo24/Udemy-clone"
-            bg1={udemy}
-            img={arrow}
-            title="Udemy"
-            text="A Udemy landing page clone using HTML and CSS"
-          />
-          <Project
-            to1="https://temi-instagramclone25.netlify.app/"
-            to2="https://github.com/Temidayo24/Instagram-clone"
-            bg1={insta}
-            img={arrow}
-            title="Instagram"
-            text="Cloned Instagram web interface using HTML and CSS"
-          />
-          <Project
-            to1="https://to-do-list-app-temi.netlify.app/"
-            to2="https://github.com/Temidayo24/ToDo-List"
-            bg1={todo}
-            img={arrow}
-            title="To-Do List App"
-            text="Built a CRUD application with HTML, CSS and JavaScript."
-          />
-          <Project
-            to1="https://lionel-messi-clone.netlify.app/"
-            to2="https://github.com/Temidayo24/Lionel-Messi-Google-Search-Clone"
-            bg1={google}
-            img={arrow}
-            title="Google"
-            text="Cloned the Google interface when you search for Lionel Messi using HTML and CSS"
-          />
-          <Project
-            to1="https://temi-react-form.netlify.app/"
-            to2="https://github.com/Temidayo24/ReactForm"
-            bg1={form}
-            img={arrow}
-            title="Form"
-            text="Built a form that sends user data to an API endpoint"
-          />
-          <Project
-            to1="https://temi-netflix-replica.netlify.app/"
-            to2="https://github.com/Temidayo24/Stutern-Netflix-Assignment"
-            bg1={netflix}
-            img={arrow}
-            title="Netflix"
-            text="Cloned Netflix landing page with HTML and CSS"
-          />
+      <div id="project">
+        <div
+          className=" flex large:flex-row flex-col h-full pt-16 pb-10 px-[5%] gap-[30px]"
+          id=""
+        >
+          <div className="flex large:flex-col gap-[6px] large:text-start text-center self-center large:self-start large:text-[80px] text-2xl large:w-fit w-full  text-coral font-['Poppins'] font-bold">
+            <span>My</span>
+            <span>Projects .</span>
+          </div>
+          <div className="h-full grid large:grid-cols-2 gap-4 grid-col large:w-[60vw]">
+            <Project
+              to1="https://temi-starwars-app.netlify.app/"
+              to2="https://github.com/Temidayo24/StarwarsReactProject-Stutern"
+              bg1={loanwise}
+              img={arrow}
+              title="Starwars"
+              text="Cloned the starwars movie site page using React and CSS"
+            />
+            <Project
+              to1="https://temi-starwars-app.netlify.app/"
+              to2="https://github.com/Temidayo24/StarwarsReactProject-Stutern"
+              bg1={stars}
+              img={arrow}
+              title="Starwars"
+              text="Cloned the starwars movie site page using React and CSS"
+            />
+            <Project
+              to1="https://temiudemyclonesite.netlify.app/"
+              to2="https://github.com/Temidayo24/Udemy-clone"
+              bg1={udemy}
+              img={arrow}
+              title="Udemy"
+              text="A Udemy landing page clone using HTML and CSS"
+            />
+            <Project
+              to1="https://temi-instagramclone25.netlify.app/"
+              to2="https://github.com/Temidayo24/Instagram-clone"
+              bg1={insta}
+              img={arrow}
+              title="Instagram"
+              text="Cloned Instagram web interface using HTML and CSS"
+            />
+            <Project
+              to1="https://to-do-list-app-temi.netlify.app/"
+              to2="https://github.com/Temidayo24/ToDo-List"
+              bg1={todo}
+              img={arrow}
+              title="To-Do List App"
+              text="Built a CRUD application with HTML, CSS and JavaScript."
+            />
+            <Project
+              to1="https://lionel-messi-clone.netlify.app/"
+              to2="https://github.com/Temidayo24/Lionel-Messi-Google-Search-Clone"
+              bg1={google}
+              img={arrow}
+              title="Google"
+              text="Cloned the Google interface when you search for Lionel Messi using HTML and CSS"
+            />
+            <Project
+              to1="https://temi-react-form.netlify.app/"
+              to2="https://github.com/Temidayo24/ReactForm"
+              bg1={form}
+              img={arrow}
+              title="Form"
+              text="Built a form that sends user data to an API endpoint"
+            />
+            <Project
+              to1="https://temi-netflix-replica.netlify.app/"
+              to2="https://github.com/Temidayo24/Stutern-Netflix-Assignment"
+              bg1={netflix}
+              img={arrow}
+              title="Netflix"
+              text="Cloned Netflix landing page with HTML and CSS"
+            />
+          </div>
         </div>
       </div>
       {/* End of Project Section */}

@@ -11,9 +11,9 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2 }) => {
     }
   };
   return (
-    <div className="large:h-more h-half w-full flex flex-row gap-2 border-sm border-eggshell overflow-hidden rounded-corners large:gap-6 hover:scale-y-105 ease-in-out">
+    <div className="large:h-1/2 h-full w-full gap-2 large:gap-0 border-sm border-coral overflow-hidden rounded-corners2 hover:scale-y-105 ease-in-out large:basis-1/2 bg-black">
       <div className="relative large:h-full h-96 group ">
-        <div className="group relative w-full h-full transition-all group-hover:opacity-40 bg-eggshell ">
+        <div className="group relative w-full h-full transition-all group-hover:opacity-20 bg-eggshell ">
           <video ref={videoRef} onClick={handleVideoPlay} muted autoPlay loop className="overflow-hidden ">
             <source src={bg1} type="video/mp4" />
           </video>
@@ -23,8 +23,8 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2 }) => {
             className="h-96 w-96 transition-opacity group-hover:opacity-50 hidden"
           />
         </div>
-        <div className="hidden group-hover:block absolute z-100 left-1/2 bottom-0 -translate-x-1/2 -translate-y-1/2 top-1/2 w-full text-eggshell overflow-hidden transition-all delay-300">
-          <div className="flex flex-col-reverse gap-2 w-full h-full px-4 justify-center">
+        <div className="hidden group-hover:block group-hover: text-opacity-100 absolute z-100 left-1/2 bottom-0 -translate-x-1/2 -translate-y-1/2 top-1/2 w-full text-eggshell overflow-hidden transition-all delay-300 font-bold">
+          <div className="flex flex-col-reverse gap-4 w-full h-full px-4 justify-center">
             <div className="flex">
               <Link to={to1} className="flex gap-2 w-full underline">
                 <span>View site</span>
