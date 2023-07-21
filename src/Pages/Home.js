@@ -256,7 +256,7 @@ const Home = () => {
         className={
           dropdown
             ? "bg-black"
-            : "bg-eggshell flex large:flex-row flex-col h-full pt-16 pb-10 px-[5%] justify-between"
+            : "bg-eggshell flex large:flex-row flex-col h-full py-[7%] px-[5%] justify-between"
         }
         id="about"
       >
@@ -316,7 +316,7 @@ const Home = () => {
       {/* Project section */}
       <div id="project">
         <div
-          className=" flex large:flex-row flex-col h-full pt-16 pb-10 px-[5%] large:gap-[30px] gap-[10px]"
+          className=" flex large:flex-row flex-col h-full py-[7%] px-[5%] large:gap-[30px] gap-[10px]"
           id=""
         >
           <div className="flex large:flex-col gap-[6px] large:text-start text-center self-center large:self-start large:text-[80px] text-2xl large:w-fit w-full  text-coral font-['Poppins'] font-bold">
