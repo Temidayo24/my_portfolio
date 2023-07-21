@@ -83,3 +83,7 @@ a .active {
   color: #ff5335;
   border-bottom: 2px solid #ff5335
 }
+
+.change {
+  filter: invert(42%) sepia(35%) saturate(2979%) hue-rotate(339deg) brightness(100%) contrast(101%);
+}

@@ -11,11 +11,13 @@ import udemy from "../udemy.mp4";
 import netflix from "../netflix.mp4";
 import loanwise from "../loanwise.mp4"
 import arrow from "../arrow.png";
-import git from "./../git.png";
-import tailwind from "./../tailwind.png";
-import html from "./../html-5.png";
-import css from "./../css-3.png";
-import react from "./../react.png";
+import git from "./../git.svg";
+import tailwind from "./../tailwindcss.svg";
+import html from "./../html.svg";
+import css from "./../css.svg";
+import react from "./../react.svg";
+import js from "./../javascript.svg";
+import code from "./../code.svg";
 import down from "./../down.png";
 import Skills from "../Components/Skills";
 import tag from "../closetag.png";
@@ -29,26 +31,36 @@ import gitlogo from "../github.svg";
 import linkedin from "../linkedin.svg";
 import mail from "../email.png";
 import call from "../call.png";
-import menu from "../menu.png";
+import menu from "../menu.svg";
 import close from "../close.svg";
 import { HashLink, NavHashLink } from "react-router-hash-link";
 import Nav from "../Components/Nav";
 
 const Dropdown = () => {
   return (
-    <div className="flex justify-between gap-6 font-bold p-5 w-full  bg-eggshell h-screen items-start ">
-      <div className="flex flex-col gap-6 font-bold text-lg text-coral">
-        <Nav text="Home" to="/#home" />
-        <Nav text="About" to="/#about" />
-        <Nav text="Projects" to="/#project" />
-        <Nav text="Contact" to="/#contact" />
-      </div>
-      <div className="flex flex-col p-4 justify-end items-center bg-coral gap-2">
-        <Socials location={gitlogo} to="https://github.com/temidayo24" alt="github"/>
-        <Socials location={linkedin} to="https://www.linkedin.com/temidayokehinde" alt="linkedin"/>
-        <Socials location={twitter} to="/git" alt="twitter" />
-        <Socials location={mail} to="/git" alt="mail" />
-        <Socials location={call} to="/git" alt="call" />
+    <div>
+      <div className="flex justify-between gap-6 font-bold p-5 w-full  bg-eggshell h-screen items-start ">
+        <div className="flex flex-col gap-6 font-bold text-lg text-coral">
+          <Nav text="Home" to="/#home" />
+          <Nav text="About" to="/#about" />
+          <Nav text="Projects" to="/#project" />
+          <Nav text="Contact" to="/#contact" />
+        </div>
+        <div className="flex flex-col p-4 justify-end items-center bg-coral gap-2">
+          <Socials
+            location={gitlogo}
+            to="https://github.com/temidayo24"
+            alt="github"
+          />
+          <Socials
+            location={linkedin}
+            to="https://www.linkedin.com/temidayokehinde"
+            alt="linkedin"
+          />
+          <Socials location={twitter} to="/git" alt="twitter" />
+          <Socials location={mail} to="/git" alt="mail" />
+          <Socials location={call} to="/git" alt="call" />
+        </div>
       </div>
     </div>
   );
@@ -139,7 +151,7 @@ const Home = () => {
           <Nav text="Projects" to="/#project" />
           <Nav text="Contact" to="/#contact" />
         </div>
-        <div className="large:flex hidden justify-end items-center gap-2">
+        <div className="large:flex hidden justify-end items-center gap-5">
           <Socials
             location={gitlogo}
             to="https://github.com/temidayo24"
@@ -164,7 +176,11 @@ const Home = () => {
         >
           <img
             src={dropdown ? close : menu}
-            className="w-8  self-end justify-end"
+            className={
+              scrolled
+                ? "w-8  self-end justify-end"
+                : "w-8  self-end justify-end change"
+            }
             onClick={handleClick}
           />
           {dropdown && <Dropdown />}
@@ -236,16 +252,19 @@ const Home = () => {
       {/* End of Home Section */}
 
       {/* About Section */}
-      <div className="" id="about">
-        <div
-          className="bg-eggshell flex large:flex-row flex-col h-full pt-16 pb-10 px-[5%] justify-between"
-          id=""
-        >
+      <div
+        className={
+          dropdown
+            ? "bg-black"
+            : "bg-eggshell flex large:flex-row flex-col h-full pt-16 pb-10 px-[5%] justify-between"
+        }
+        id="about"
+      >
           <div className="flex large:flex-col gap-[6px] large:text-start text-center large:text-[80px] text-2xl large:w-fit text-black font-['Poppins'] font-bold">
             <span>About</span>
             <span>Me .</span>
           </div>
-          <div className="h-full large:flex-row flex flex-col justify-center gap-8 large:w-[60vw] text-black font-bold">
+          <div className="h-full large:flex-row flex flex-col gap-8 large:w-[60vw] text-black font-bold">
             <div className="flex flex-col gap-2 text-justify large:text-lg">
               <p className="text-justify">
                 Hi there! I'm thrilled to introduce myself and share my journey
@@ -282,22 +301,23 @@ const Home = () => {
                 remarkable!
               </p>
             </div>
-            <div className="flex large:flex-col gap-4 large:w-2/4  align-center justify-center w-full pt-[15px] pb-[5px]">
-              <Skills location={react} text="React" />
-              <Skills location={tailwind} text="Tailwind" />
-              <Skills location={html} text="HTML" />
-              <Skills location={css} text="CSS" />
-              <Skills location={git} text="Git" />
+            <div className="flex large:flex-col gap-[2px] large:w-2/4  align-center justify-center large:self-start w-full pt-[15px] pb-[5px]">
+              <Skills location={react} />
+              <Skills location={tailwind} />
+              <Skills location={html}  />
+              <Skills location={css} />
+              <Skills location={git} />
+              <Skills location={js} />
+              <Skills location={code} />
             </div>
           </div>
-        </div>
       </div>
       {/* End of About Section */}
 
       {/* Project section */}
       <div id="project">
         <div
-          className=" flex large:flex-row flex-col h-full pt-16 pb-10 px-[5%] gap-[30px]"
+          className=" flex large:flex-row flex-col h-full pt-16 pb-10 px-[5%] large:gap-[30px] gap-[10px]"
           id=""
         >
           <div className="flex large:flex-col gap-[6px] large:text-start text-center self-center large:self-start large:text-[80px] text-2xl large:w-fit w-full  text-coral font-['Poppins'] font-bold">
