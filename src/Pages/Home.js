@@ -226,7 +226,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="tracking-wide capitalize text-right large:text-lg flex flex-col gap-2">
-                <p className="text-right w-[90%] self-end justify-right">
+                <p className="text-right large:w-[95%] w-[90%] self-end justify-right">
                   I am <span className="">passionate</span> about bridging the
                   gap between businesses and their customers by bringing{" "}
                   <span className=" "> user-friendly designs</span> to life
