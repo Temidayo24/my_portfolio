@@ -36,6 +36,9 @@ import close from "../close.svg";
 import { HashLink, NavHashLink } from "react-router-hash-link";
 import Nav from "../Components/Nav";
 
+
+const Home = () => {
+
 const Dropdown = () => {
   return (
     <div>
@@ -51,22 +54,28 @@ const Dropdown = () => {
             location={gitlogo}
             to="https://github.com/temidayo24"
             alt="github"
+            scrolled={scrolled}
           />
           <Socials
             location={linkedin}
             to="https://www.linkedin.com/temidayokehinde"
             alt="linkedin"
+            scrolled={scrolled}
           />
-          <Socials location={twitter} to="/git" alt="twitter" />
-          <Socials location={mail} to="/git" alt="mail" />
-          <Socials location={call} to="/git" alt="call" />
+          <Socials
+            location={twitter}
+            to="/git"
+            alt="twitter"
+            scrolled={scrolled}
+          />
+          <Socials location={mail} to="/git" alt="mail" scrolled={scrolled} />
+          <Socials location={call} to="/git" alt="call" scrolled={scrolled} />
         </div>
       </div>
     </div>
   );
 };
 
-const Home = () => {
   const texts = ["Hi!", "Bonjour!", "Ciao!", "Hola!"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [dropdown, setDropdown] = useState(false);
@@ -145,7 +154,11 @@ const Home = () => {
             Temidayo Kehinde
           </Link>
         )}
-        <div className="large:flex gap-6 hidden font-bold">
+        <div
+          className={`large:flex gap-6 hidden font-bold ${
+            scrolled ? "text-black" : " "
+          }`}
+        >
           <Nav text="Home" to="/#home" />
           <Nav text="About" to="/#about" />
           <Nav text="Projects" to="/#project" />
@@ -156,15 +169,22 @@ const Home = () => {
             location={gitlogo}
             to="https://github.com/temidayo24"
             alt="github"
+            scrolled={scrolled}
           />
           <Socials
             location={linkedin}
             to="https://www.linkedin.com/temidayokehinde"
             alt="linkedin"
+            scrolled={scrolled}
           />
-          <Socials location={twitter} to="/git" alt="twitter" />
-          <Socials location={mail} to="/git" alt="mail" />
-          <Socials location={call} to="/git" alt="call" />
+          <Socials
+            location={twitter}
+            to="/git"
+            alt="twitter"
+            scrolled={scrolled}
+          />
+          <Socials location={mail} to="/git" alt="mail" scrolled={scrolled} />
+          <Socials location={call} to="/git" alt="call" scrolled={scrolled} />
         </div>
         <div
           onClick={handleClick}
