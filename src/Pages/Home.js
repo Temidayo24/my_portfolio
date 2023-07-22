@@ -218,7 +218,7 @@ const Dropdown = () => {
         }
         id="home"
       >
-        <div className="flex large:flex-row-reverse flex-col-reverse large:gap-6 gap-0 items-center justify-center m-auto relative h-[100vh] large:h-full">
+        <div className="flex large:flex-row-reverse flex-col-reverse large:gap-6 gap-0 items-center justify-center m-auto relative h-[100vh] large:h-full large:w-[80%]">
           <div className="large:w-1/2 relative h-[46vh] large:h-[60vh]">
             <img
               src={img}
@@ -234,19 +234,19 @@ const Dropdown = () => {
                     {texts[currentTextIndex]}{" "}
                   </span>
                   <br />
-                  <span className="text-[14px]">My name is </span>
+                  <span className="text-[0.85em]">My name is </span>
                   <div className="type inline">
-                    <span className="text-coral large:text-5xl text-3xl typing">
+                    <span className="text-coral large:text-[65px] text-[36px] typing font-[Poppins]">
                       Temidayo Kehinde
                     </span>
                   </div>
                 </p>
-                <span className="large:text-xl text-sm text-right">
+                <span className="large:text-xl text-sm text-right font-bold">
                   Front-End Web Developer{" "}
                   <img src={tag} className="inline large:w-10 pl-2 w-8" />
                 </span>
               </div>
-              <div className="tracking-wide capitalize text-right large:text-lg flex flex-col gap-2">
+              <div className="tracking-wide capitalize text-right large:text-lg flex flex-col gap-2 font-bold">
                 <p className="text-right large:w-[95%] w-[90%] self-end justify-right">
                   I am <span className="">passionate</span> about bridging the
                   gap between businesses and their customers by bringing{" "}

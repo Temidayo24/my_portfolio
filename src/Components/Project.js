@@ -47,8 +47,8 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2, skillA, ski
             <div>
               <span>{skillA}</span>
               <span>{skillB}</span>
-              <span>{skillA}</span>
-              <span>{skillA}</span>
+              <span>{skillC}</span>
+              <span>{skillD}</span>
             </div>
             <div className="flex flex-col h-1/5 large:gap-2">
               <span className="text-xl font-bold">{title}</span>
