@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2 }) => {
+const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2, skillA, skillB, skillC, skillD }) => {
   const videoRef = useRef(null);
 
   const handleVideoPlay = () => {
@@ -43,6 +43,12 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2 }) => {
                   className="cursor-pointer w-medium h-medium brightness-100 invert"
                 />
               </Link>
+            </div>
+            <div>
+              <span>{skillA}</span>
+              <span>{skillB}</span>
+              <span>{skillA}</span>
+              <span>{skillA}</span>
             </div>
             <div className="flex flex-col h-1/5 large:gap-2">
               <span className="text-xl font-bold">{title}</span>

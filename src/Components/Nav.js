@@ -2,11 +2,11 @@ import React from 'react'
 import { NavHashLink } from 'react-router-hash-link';
 import '../index.css'
 
-const Nav = ({text, to}) => {
+const Nav = ({text, to, dropdown}) => {
   return (
     <NavHashLink
       to={to}
-      activeClassName='active1'
+      className=""
     >
      {text}
     </NavHashLink>

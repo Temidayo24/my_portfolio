@@ -18,6 +18,7 @@ import css from "./../css.svg";
 import react from "./../react.svg";
 import js from "./../javascript.svg";
 import code from "./../code.svg";
+import logo from "./../logo.svg.svg"
 import down from "./../down.png";
 import Skills from "../Components/Skills";
 import tag from "../closetag.png";
@@ -42,14 +43,14 @@ const Home = () => {
 const Dropdown = () => {
   return (
     <div>
-      <div className="flex justify-between gap-6 font-bold p-5 w-full  bg-eggshell h-screen items-start ">
-        <div className="flex flex-col gap-6 font-bold text-lg text-coral">
+      <div className="flex justify-between gap-6 font-bold px-[10%] pt-[10%] w-full  bg-eggshell h-screen items-start ">
+        <div className="flex flex-col gap-6 font-bold text-lg text-black">
           <Nav text="Home" to="/#home" />
           <Nav text="About" to="/#about" />
           <Nav text="Projects" to="/#project" />
           <Nav text="Contact" to="/#contact" />
         </div>
-        <div className="flex flex-col p-4 justify-end items-center bg-coral gap-2">
+        <div className="flex flex-col p-4 justify-end items-center bg-black gap-2">
           <Socials
             location={gitlogo}
             to="https://github.com/temidayo24"
@@ -140,8 +141,8 @@ const Dropdown = () => {
     <div className="bg-black w-full m-0 text-eggshell h-full relative flex flex-col gap-0 ">
       {/* Header Section */}
       <div
-        className={`flex justify-between px-4 py-4 text-eggshell font-bold large:text-[1.1em] fixed w-full z-100 ${
-          scrolled ? "z-50 bg-coral" : ""
+        className={`flex justify-between px-[3%] py-[10px] text-eggshell font-bold large:text-[1.1em] fixed w-full z-100 ${
+          scrolled ? "z-50 bg-coral border-b-[1px] border-black" : ""
         }`}
       >
         {dropdown ? (
@@ -151,11 +152,11 @@ const Dropdown = () => {
             to="/"
             className="text-eggshell text-sm large:text-md font-bold"
           >
-            Temidayo Kehinde
+            <img src={logo} alt="my logo" className={`large:w-[48px] w-[32px] ${scrolled ? "change" : ""}`}/>
           </Link>
         )}
         <div
-          className={`large:flex gap-6 hidden font-bold ${
+          className={`large:flex gap-6 hidden font-bold items-center ${
             scrolled ? "text-black" : " "
           }`}
         >
@@ -190,7 +191,7 @@ const Dropdown = () => {
           onClick={handleClick}
           className={
             dropdown
-              ? "w-screen flex flex-col gap-4"
+              ? "w-screen flex flex-col gap-4 large:items-center"
               : "text-xl large:hidden items-end"
           }
         >
@@ -198,7 +199,7 @@ const Dropdown = () => {
             src={dropdown ? close : menu}
             className={
               scrolled
-                ? "w-8  self-end justify-end"
+                ? "w-8  self-end justify-end large:items-center"
                 : "w-8  self-end justify-end change"
             }
             onClick={handleClick}
