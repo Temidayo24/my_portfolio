@@ -86,3 +86,18 @@ a .active {
 
 .change {
 filter: invert(100%) sepia(15%) saturate(1745%) hue-rotate(291deg) brightness(92%) contrast(99%);}
+
+#form-input-control-last-name,
+#form-input-control-email,
+#form-textarea-control-opinion {
+  width: 100%;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #e9dddd;
+  outline: none;
+}
+
+#form-textarea-control-opinion {
+  height: 200px;
+}

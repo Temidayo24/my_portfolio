@@ -1,5 +1,8 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import emailjs from 'emailjs-com';
+import { Form, Input, TextArea, Button } from 'semantic-ui-react';
+import Swal from 'sweetalert2';
 import img from "./../IMG-9523.JPG";
 import Project from "../Components/Project";
 import form from "../form.mp4";
@@ -9,7 +12,7 @@ import google from "../google.mp4";
 import insta from "../instagram.mp4";
 import udemy from "../udemy.mp4";
 import netflix from "../netflix.mp4";
-import loanwise from "../loanwise.mp4"
+import loanwise from "../loanwise.mp4";
 import arrow from "../arrow.png";
 import git from "./../git.svg";
 import tailwind from "./../tailwindcss.svg";
@@ -18,7 +21,6 @@ import css from "./../css.svg";
 import react from "./../react.svg";
 import js from "./../javascript.svg";
 import code from "./../code.svg";
-import logo from "./../logo.svg.svg"
 import down from "./../down.png";
 import Skills from "../Components/Skills";
 import tag from "../closetag.png";
@@ -26,64 +28,41 @@ import { Link } from "react-router-dom";
 import Header from "../Components/Header";
 import { useEffect, useState } from "react";
 import Footer from "../Components/Footer";
-import Socials from "../Components/Socials";
-import twitter from "../twitter.svg";
-import gitlogo from "../github.svg";
-import linkedin from "../linkedin.svg";
-import mail from "../email.png";
-import call from "../call.png";
-import menu from "../menu.svg";
-import close from "../close.svg";
-import { HashLink, NavHashLink } from "react-router-hash-link";
-import Nav from "../Components/Nav";
 
 
 const Home = () => {
-
-const Dropdown = () => {
-  return (
-    <div>
-      <div className="flex justify-between gap-6 font-bold px-[10%] pt-[10%] w-full  bg-eggshell h-screen items-start ">
-        <div className="flex flex-col gap-6 font-bold text-lg text-black">
-          <Nav text="Home" to="/#home" />
-          <Nav text="About" to="/#about" />
-          <Nav text="Projects" to="/#project" />
-          <Nav text="Contact" to="/#contact" />
-        </div>
-        <div className="flex flex-col p-4 justify-end items-center bg-black gap-2">
-          <Socials
-            location={gitlogo}
-            to="https://github.com/temidayo24"
-            alt="github"
-            scrolled={scrolled}
-          />
-          <Socials
-            location={linkedin}
-            to="https://www.linkedin.com/temidayokehinde"
-            alt="linkedin"
-            scrolled={scrolled}
-          />
-          <Socials
-            location={twitter}
-            to="/git"
-            alt="twitter"
-            scrolled={scrolled}
-          />
-          <Socials location={mail} to="/git" alt="mail" scrolled={scrolled} />
-          <Socials location={call} to="/git" alt="call" scrolled={scrolled} />
-        </div>
-      </div>
-    </div>
-  );
-};
-
   const texts = ["Hi!", "Bonjour!", "Ciao!", "Hola!"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [dropdown, setDropdown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const SERVICE_ID = "**************";
+  const TEMPLATE_ID = "*******";
+  const PUBLIC_KEY = "****************";
 
   const handleClick = () => {
     setDropdown(!dropdown);
+  };
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent Successfully",
+        });
+      },
+      (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: "error",
+          title: "Ooops, something went wrong",
+          text: error.text,
+        });
+      }
+    );
+    e.target.reset();
   };
 
   useEffect(() => {
@@ -140,73 +119,11 @@ const Dropdown = () => {
   return (
     <div className="bg-black w-full m-0 text-eggshell h-full relative flex flex-col gap-0 ">
       {/* Header Section */}
-      <div
-        className={`flex justify-between px-[3%] py-[10px] text-eggshell font-bold large:text-[1.1em] fixed w-full z-100 ${
-          scrolled ? "z-50 bg-coral border-b-[1px] border-black" : ""
-        }`}
-      >
-        {dropdown ? (
-          " "
-        ) : (
-          <Link
-            to="/"
-            className="text-eggshell text-sm large:text-md font-bold"
-          >
-            <img src={logo} alt="my logo" className={`large:w-[48px] w-[32px] ${scrolled ? "change" : ""}`}/>
-          </Link>
-        )}
-        <div
-          className={`large:flex gap-6 hidden font-bold items-center ${
-            scrolled ? "text-black" : " "
-          }`}
-        >
-          <Nav text="Home" to="/#home" />
-          <Nav text="About" to="/#about" />
-          <Nav text="Projects" to="/#project" />
-          <Nav text="Contact" to="/#contact" />
-        </div>
-        <div className="large:flex hidden justify-end items-center gap-5">
-          <Socials
-            location={gitlogo}
-            to="https://github.com/temidayo24"
-            alt="github"
-            scrolled={scrolled}
-          />
-          <Socials
-            location={linkedin}
-            to="https://www.linkedin.com/temidayokehinde"
-            alt="linkedin"
-            scrolled={scrolled}
-          />
-          <Socials
-            location={twitter}
-            to="/git"
-            alt="twitter"
-            scrolled={scrolled}
-          />
-          <Socials location={mail} to="/git" alt="mail" scrolled={scrolled} />
-          <Socials location={call} to="/git" alt="call" scrolled={scrolled} />
-        </div>
-        <div
-          onClick={handleClick}
-          className={
-            dropdown
-              ? "w-screen flex flex-col gap-4 large:items-center"
-              : "text-xl large:hidden items-end"
-          }
-        >
-          <img
-            src={dropdown ? close : menu}
-            className={
-              scrolled
-                ? "w-8  self-end justify-end large:items-center"
-                : "w-8  self-end justify-end change"
-            }
-            onClick={handleClick}
-          />
-          {dropdown && <Dropdown />}
-        </div>
-      </div>
+      <Header
+        scrolled={scrolled}
+        dropdown={dropdown}
+        handleClick={handleClick}
+      />
       {/* End of Header Section */}
 
       {/* Home Section */}
@@ -281,11 +198,11 @@ const Dropdown = () => {
         }
         id="about"
       >
-        <div className="flex large:flex-col gap-[6px] large:text-start text-center large:text-[80px] text-2xl large:w-fit text-black font-['Poppins'] font-bold">
+        <div className="flex large:flex-col gap-[6px] large:text-start text-center large:text-[80px] text-2xl large:w-[35vw] text-black font-['Poppins'] font-bold">
           <span>About</span>
           <span>Me .</span>
         </div>
-        <div className="h-full large:flex-row flex flex-col gap-8 large:w-[60vw] text-black font-bold">
+        <div className="h-full large:flex-row flex flex-col gap-8 large:w-[65vw] text-black font-bold">
           <div className="flex flex-col gap-2 text-justify large:text-lg">
             <p className="text-justify">
               Hi there! I'm thrilled to introduce myself and share my journey
@@ -296,15 +213,18 @@ const Dropdown = () => {
             <p className="text-justify">
               During my learning journey, I've acquired a solid foundation in
               various programming languages, such as{" "}
-              <span className="text-coral font-bold">HTML</span>,{" "}
-              <span className="text-coral font-bold">CSS</span>, and
-              <span className="text-coral font-bold"> JavaScript</span>. I've
-              also gained experience in frameworks and libraries like{" "}
-              <span className="text-coral font-bold">React</span> and
-              <span className="text-coral font-bold"> TailwindCSS</span> and can
-              also collaborate well on Git and GitHub. With every project I
-              tackle, I strive to improve my problem-solving skills and enhance
-              my ability to write clean and efficient code.
+              <span className="text-html font-extrabold text-xl">HTML</span>,{" "}
+              <span className="text-css font-extrabold text-xl">CSS</span>, and
+              <span className="text-js font-extrabold text-xl"> JavaScript</span>.
+              I've also gained experience in frameworks and libraries like{" "}
+              <span className="text-react font-extrabold text-xl">ReactJs</span> and
+              <span className="text-twc font-extrabold text-xl">
+                {" "}
+                TailwindCSS
+              </span>{" "}
+              and can also collaborate well on Git and GitHub. With every
+              project I tackle, I strive to improve my problem-solving skills
+              and enhance my ability to write clean and efficient code.
             </p>
             <p className="text-justify"></p>
             <p className="text-justify">
@@ -337,19 +257,21 @@ const Dropdown = () => {
       {/* Project section */}
       <div id="project">
         <div
-          className=" flex large:flex-row flex-col h-full py-[7%] px-[5%] large:gap-[30px] gap-[10px]"
+          className=" flex large:flex-row flex-col h-full py-[7%] px-[5%] large:gap-[0px] gap-[10px]"
           id=""
         >
-          <div className="flex large:flex-col gap-[6px] large:text-start text-center self-center large:self-start large:text-[80px] text-2xl large:w-fit w-full  text-coral font-['Poppins'] font-bold">
+          <div className="flex large:flex-col gap-[6px] large:text-start text-center self-center large:self-start large:text-[80px] text-2xl large:w-[35vw] w-full  text-coral font-['Poppins'] font-bold">
             <span>My</span>
             <span>Projects .</span>
           </div>
-          <div className="h-full grid large:grid-cols-2 gap-4 grid-col large:w-[60vw]">
+          <div className="h-full grid large:grid-cols-2 gap-4 grid-col large:w-[65vw]">
             <Project
               to1="https://temi-starwars-app.netlify.app/"
               to2="https://github.com/Temidayo24/StarwarsReactProject-Stutern"
               bg1={loanwise}
               img={arrow}
+              skillA="React"
+              skillB="CSS"
               title="LoanWise App"
               text="Collaborated with a team of developers and data scientists to build a loan prediction application."
             />
@@ -413,6 +335,66 @@ const Dropdown = () => {
         </div>
       </div>
       {/* End of Project Section */}
+
+      {/*Start of Contact Section  */}
+      <div id="contact">
+        <div
+          className=" flex large:flex-row flex-col h-full py-[7%] px-[5%] large:gap-[30px] gap-[10px] bg-eggshell"
+          id=""
+        >
+          <div className="flex large:flex-col gap-[6px] large:text-start text-center self-center large:self-start large:text-[80px] text-2xl large:w-[35vw] w-full  text-black font-['Poppins'] font-bold">
+            <span>Contact</span>
+            <span>Me .</span>
+          </div>
+          <div className="h-full large:w-[65vw] border-sm border-black rounded-corners">
+            <Form
+              onSubmit={handleOnSubmit}
+              className=" flex flex-col gap-2 p-[3%] w-full "
+            >
+              <Form.Field
+                className=" text-black flex flex-col w-full gap-[4px] font-bold"
+                id="form-input-control-email"
+                control={Input}
+                label="Email"
+                name="user_email"
+                placeholder="Email…"
+                required
+                icon="mail"
+                iconPosition="left"
+              />
+
+              <Form.Field
+                className=" text-black flex flex-col w-full gap-[4px] font-bold"
+                id="form-input-control-last-name"
+                control={Input}
+                label="Name"
+                name="user_name"
+                placeholder="Name…"
+                required
+                icon="user circle"
+                iconPosition="left"
+              />
+
+              <Form.Field
+                className=" text-black flex flex-col gap-[4px] font-bold"
+                id="form-textarea-control-opinion"
+                control={TextArea}
+                label="Message"
+                name="user_message"
+                placeholder="Message…"
+                required
+              />
+              <Button
+                type="submit"
+                className="bg-black text-eggshell w-fit px-[10px] py-[5px] self-center rounded-[5px] font-bold"
+              >
+                Submit
+              </Button>
+            </Form>
+          </div>
+        </div>
+      </div>
+      {/* End of Contact Section */}
       <Footer />
     </div>
   );

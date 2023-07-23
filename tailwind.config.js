@@ -9,7 +9,7 @@ export default withMT({
         medium: "24px",
         project: "95%",
         cards: "400px",
-        cards2: "250px"
+        cards2: "250px",
       },
 
       brightness: {
@@ -39,14 +39,19 @@ export default withMT({
       medium: "24px",
       half: "45vh",
       more: "60vh",
-      small2: "90vw"
+      small2: "90vw",
     },
 
     colors: {
       "blue-centric": "#E6E6E6",
-      coral: "#e9dddd",
-      eggshell: "#e9dddd",
+      coral: "#ffffff",
+      eggshell: "#ffffff",
       leather: "#fee8b0",
+      html: "#E65100",
+      css: "#0277BD",
+      js: "#FFD600",
+      react: "#80DEEA",
+      twc: "#00ACC1"
     },
     screens: {
       large: "720px",
