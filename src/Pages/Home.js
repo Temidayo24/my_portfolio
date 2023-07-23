@@ -232,7 +232,7 @@ const Home = () => {
               <span className="text-twc font-extrabold  bg-black px-[4px] font-[Poppins]">
                 TailwindCSS
               </span>{" "}
-              and can also collaborate well on Git and GitHub. With every
+              ,and can also collaborate well on Git and GitHub. With every
               project I tackle, I strive to improve my problem-solving skills
               and enhance my ability to write clean and efficient code.
             </p>
