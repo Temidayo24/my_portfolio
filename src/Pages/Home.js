@@ -213,13 +213,23 @@ const Home = () => {
             <p className="text-justify">
               During my learning journey, I've acquired a solid foundation in
               various programming languages, such as{" "}
-              <span className="text-html font-extrabold text-xl">HTML</span>,{" "}
-              <span className="text-css font-extrabold text-xl">CSS</span>, and
-              <span className="text-js font-extrabold text-xl"> JavaScript</span>.
-              I've also gained experience in frameworks and libraries like{" "}
-              <span className="text-react font-extrabold text-xl">ReactJs</span> and
-              <span className="text-twc font-extrabold text-xl">
-                {" "}
+              <span className="text-html font-extrabold bg-black px-[4px] font-[Poppins]">
+                HTML
+              </span>
+              ,{" "}
+              <span className="text-css font-extrabold  bg-black px-[4px] font-[Poppins]">
+                CSS
+              </span>
+              , and{" "}
+              <span className="text-js font-extrabold  bg-black px-[4px] font-[Poppins]">
+                JavaScript
+              </span>
+              . I've also gained experience in frameworks and libraries like{" "}
+              <span className="text-react font-extrabold  bg-black px-[4px] font-[Poppins]">
+                ReactJs
+              </span>{" "}
+              and{" "}
+              <span className="text-twc font-extrabold  bg-black px-[4px] font-[Poppins]">
                 TailwindCSS
               </span>{" "}
               and can also collaborate well on Git and GitHub. With every
@@ -270,8 +280,10 @@ const Home = () => {
               to2="https://github.com/Temidayo24/StarwarsReactProject-Stutern"
               bg1={loanwise}
               img={arrow}
-              skillA="React"
-              skillB="CSS"
+              skillA="ReactJs"
+              skillB="HTML"
+              skillC="CSS"
+              skillD=""
               title="LoanWise App"
               text="Collaborated with a team of developers and data scientists to build a loan prediction application."
             />
@@ -280,56 +292,73 @@ const Home = () => {
               to2="https://github.com/Temidayo24/StarwarsReactProject-Stutern"
               bg1={stars}
               img={arrow}
+              skillA="ReactJs"
+              skillB="HTML"
+              skillC="CSS"
               title="Starwars"
-              text="Cloned the starwars movie site page using React and CSS"
+              text="Cloned the starwars movie site page"
             />
             <Project
               to1="https://temiudemyclonesite.netlify.app/"
               to2="https://github.com/Temidayo24/Udemy-clone"
               bg1={udemy}
               img={arrow}
+              skillB="HTML"
+              skillC="CSS"
               title="Udemy"
-              text="A Udemy landing page clone using HTML and CSS"
+              text="A Udemy landing page clone."
             />
             <Project
               to1="https://temi-instagramclone25.netlify.app/"
               to2="https://github.com/Temidayo24/Instagram-clone"
               bg1={insta}
               img={arrow}
+              skillB="HTML"
+              skillC="CSS"
               title="Instagram"
-              text="Cloned Instagram web interface using HTML and CSS"
+              text="Cloned Instagram web interface."
             />
             <Project
               to1="https://to-do-list-app-temi.netlify.app/"
               to2="https://github.com/Temidayo24/ToDo-List"
               bg1={todo}
               img={arrow}
+              skillB="HTML"
+              skillC="CSS"
+              skillD="JS"
               title="To-Do List App"
-              text="Built a CRUD application with HTML, CSS and JavaScript."
+              text="Built a CRUD application."
             />
             <Project
               to1="https://lionel-messi-clone.netlify.app/"
               to2="https://github.com/Temidayo24/Lionel-Messi-Google-Search-Clone"
               bg1={google}
               img={arrow}
+              skillB="HTML"
+              skillC="CSS"
               title="Google"
-              text="Cloned the Google interface when you search for Lionel Messi using HTML and CSS"
+              text="Cloned the Google interface when you search for Lionel Messi."
             />
             <Project
               to1="https://temi-react-form.netlify.app/"
               to2="https://github.com/Temidayo24/ReactForm"
               bg1={form}
               img={arrow}
+              skillB="HTML"
+              skillC="CSS"
+              skillD="JS"
               title="Form"
-              text="Built a form that sends user data to an API endpoint"
+              text="Built a form that sends user data to an API endpoint."
             />
             <Project
               to1="https://temi-netflix-replica.netlify.app/"
               to2="https://github.com/Temidayo24/Stutern-Netflix-Assignment"
               bg1={netflix}
               img={arrow}
+              skillB="HTML"
+              skillC="CSS"
               title="Netflix"
-              text="Cloned Netflix landing page with HTML and CSS"
+              text="Cloned Netflix landing page."
             />
           </div>
         </div>
