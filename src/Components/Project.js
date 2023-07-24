@@ -52,7 +52,7 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2, skillA, ski
               </Link>
             </div>
 
-            <div className="flex flex-col large:gap-2">
+            <div className="flex flex-col gap-2">
               <div className="flex flex-col">
                 <span className="large:text-3xl text-2xl font-bold">
                   {title}
