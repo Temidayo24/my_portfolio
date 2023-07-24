@@ -31,7 +31,7 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2, skillA, ski
           />
         </div>
         <div className="hidden group-hover:block group-hover: text-opacity-100 absolute z-100 left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 w-full text-black overflow-hidden transition-all delay-300 font-bold large:h-cards h-cards2 bg-eggshell">
-          <div className="flex flex-col-reverse gap-4 w-full large:h-cards h-cards2 px-4 justify-center">
+          <div className="flex flex-col-reverse large:gap-8 gap-4 w-full large:h-cards h-cards2 px-4 justify-center">
             <div className="flex">
               <Link to={to1} className="flex gap-2 w-full underline">
                 <span>View site</span>
@@ -51,23 +51,28 @@ const Project = ({ bg1, bg2, img, text, title, alt1, alt2, to1, to2, skillA, ski
                 />
               </Link>
             </div>
-            <div className="flex gap-[2px]">
-              <span className="text-react bg-black px-2 py-[2px] rounded-corners font-bold">
-                {skillA}
-              </span>
-              <span className="text-html  bg-black px-2 py-[2px] rounded-corners font-bold">
-                {skillB}
-              </span>
-              <span className="text-css  bg-black px-2 py-[2px] rounded-corners font-bold">
-                {skillC}
-              </span>
-              <span className="text-js  bg-black px-2 py-[2px] rounded-corners font-bold">
-                {skillD}
-              </span>
-            </div>
-            <div className="flex flex-col h-1/5 large:gap-2">
-              <span className="large:text-3xl text-2xl font-bold">{title}</span>
-              <span className="large:text-xl text-base">{text}</span>
+
+            <div className="flex flex-col large:gap-2">
+              <div className="flex flex-col">
+                <span className="large:text-3xl text-2xl font-bold">
+                  {title}
+                </span>
+                <span className="large:text-xl text-base">{text}</span>
+              </div>
+              <div className="flex gap-[2px]">
+                <span className="text-react bg-black px-2 py-[2px] rounded-corners font-bold">
+                  {skillA}
+                </span>
+                <span className="text-html  bg-black px-2 py-[2px] rounded-corners font-bold">
+                  {skillB}
+                </span>
+                <span className="text-css  bg-black px-2 py-[2px] rounded-corners font-bold">
+                  {skillC}
+                </span>
+                <span className="text-js  bg-black px-2 py-[2px] rounded-corners font-bold">
+                  {skillD}
+                </span>
+              </div>
             </div>
           </div>
         </div>

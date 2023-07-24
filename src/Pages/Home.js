@@ -35,35 +35,40 @@ const Home = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [dropdown, setDropdown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const SERVICE_ID = "**************";
-  const TEMPLATE_ID = "*******";
-  const PUBLIC_KEY = "****************";
+  const SERVICE_ID = "service_dsvmfcs";
+  const TEMPLATE_ID = "template_twuyizx";
+  const PUBLIC_KEY = "p6oFaq8_ED7GKbCVI";
 
   const handleClick = () => {
     setDropdown(!dropdown);
   };
 
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
-      (result) => {
-        console.log(result.text);
-        Swal.fire({
-          icon: "success",
-          title: "Message Sent Successfully",
-        });
-      },
-      (error) => {
-        console.log(error.text);
-        Swal.fire({
-          icon: "error",
-          title: "Ooops, something went wrong",
-          text: error.text,
-        });
-      }
-    );
-    e.target.reset();
-  };
+ const handleOnSubmit = (e) => {
+   e.preventDefault();
+
+   console.log("Form submitted!");
+
+   emailjs
+     .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+     .then((result) => {
+       console.log("Email sent successfully:", result.text);
+       Swal.fire({
+         icon: "success",
+         title: "Message Sent Successfully",
+       });
+     })
+     .catch((error) => {
+       console.error("Error sending email:", error);
+       Swal.fire({
+         icon: "error",
+         title: "Ooops, something went wrong",
+         text: "Error sending email. Please try again later.",
+       });
+     });
+
+   e.target.reset();
+ };
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -231,10 +236,18 @@ const Home = () => {
               and{" "}
               <span className="text-twc font-extrabold  bg-black px-[4px] font-[Poppins]">
                 TailwindCSS
+              </span>
+              , and can also collaborate well on{" "}
+              <span className="text-[#f4511e] font-extrabold  bg-black px-[4px] font-[Poppins]">
+                Git
               </span>{" "}
-              ,and can also collaborate well on Git and GitHub. With every
-              project I tackle, I strive to improve my problem-solving skills
-              and enhance my ability to write clean and efficient code.
+              and{" "}
+              <span className="text-coral font-extrabold  bg-black px-[4px] font-[Poppins]">
+                Github
+              </span>
+              . With every project I tackle, I strive to improve my
+              problem-solving skills and enhance my ability to write clean and
+              efficient code.
             </p>
             <p className="text-justify"></p>
             <p className="text-justify">
@@ -245,9 +258,8 @@ const Home = () => {
               continuously grow and explore new possibilities.
             </p>
             <p className="text-justify">
-              So, if you're looking for someone who can bring a fresh
-              perspective, combine technology and design seamlessly, and create
-              an enjoyable atmosphere, then I'm your person. Let's embark on
+              So, if you're looking for someone is adaptable, teachable, and can
+              translate designs perfectly, then I'm your person. Let's embark on
               this exciting journey together and create something remarkable!
             </p>
           </div>
