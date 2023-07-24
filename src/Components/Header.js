@@ -37,11 +37,16 @@ const Header = ({ scrolled, dropdown, handleClick }) => {
             />
             <Socials
               location={twitter}
-              to="/git"
+              to="https://twitter.com/ade_bi_ke"
               alt="twitter"
               scrolled={scrolled}
             />
-            <Socials location={mail} to="/git" alt="mail" scrolled={scrolled} />
+            <Socials
+              location={mail}
+              to="mailto:temidayo.kehinde.10@gmail.com"
+              alt="mail"
+              scrolled={scrolled}
+            />
             <Socials
               location={call}
               to="https://wa.me/2348188171838"
@@ -89,17 +94,22 @@ const Header = ({ scrolled, dropdown, handleClick }) => {
         />
         <Socials
           location={linkedin}
-          to="https://www.linkedin.com/temidayokehinde"
+          to="https://www.linkedin.com/in/temidayokehinde"
           alt="linkedin"
           scrolled={scrolled}
         />
         <Socials
           location={twitter}
-          to="/git"
+          to="https://twitter.com/ade_bi_ke"
           alt="twitter"
           scrolled={scrolled}
         />
-        <Socials location={mail} to="/git" alt="mail" scrolled={scrolled} />
+        <Socials
+          location={mail}
+          to="mailto:temidayo.kehinde.10@gmail.com"
+          alt="mail"
+          scrolled={scrolled}
+        />
         <Socials
           location={call}
           to="https://wa.me/2348188171838"
