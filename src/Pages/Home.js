@@ -206,7 +206,7 @@ const Home = () => {
             <span>About</span>
             <span>Me .</span>
           </div>
-          <div className="h-full large:flex-row flex flex-col gap-8 large:w-[65vw] text-black font-bold">
+          <div className="h-full large:flex-row flex flex-col gap-8 large:w-[65vw] text-black">
             <div className="flex flex-col gap-2 text-justify large:text-lg">
               <p className="text-justify">
                 Hi there! I'm thrilled to introduce myself and share my journey
