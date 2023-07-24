@@ -36,8 +36,8 @@ const Home = () => {
   const [dropdown, setDropdown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const SERVICE_ID = "service_dsvmfcs";
-  const TEMPLATE_ID = "template_twuyizx";
-  const PUBLIC_KEY = "p6oFaq8_ED7GKbCVI";
+  const TEMPLATE_ID = "template_kehinde";
+  const PUBLIC_KEY = "p6oFaq8_ED7GKbCVl";
 
   const handleClick = () => {
     setDropdown(!dropdown);
