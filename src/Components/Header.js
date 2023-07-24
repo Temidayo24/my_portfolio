@@ -5,64 +5,59 @@ import twitter from "../twitter.svg";
 import gitlogo from "../github.svg";
 import linkedin from "../linkedin.svg";
 import mail from "../email.png";
-import call from "../call.png";
+import call from "../call.svg";
 import menu from "../menu.svg";
 import close from "../close.svg";
 import { Link, NavLink } from "react-router-dom";
 import Nav from "./Nav";
 
-const Header = ({scrolled, dropdown, handleClick}) => {
-   const Dropdown = () => {
-     return (
-       <div>
-         <div className="flex justify-between gap-6 font-bold px-[10%] pt-[10%] w-full  bg-eggshell h-screen items-start ">
-           <div className="flex flex-col gap-6 font-bold text-lg text-black">
-             <Nav text="Home" to="/#home" />
-             <Nav text="About" to="/#about" />
-             <Nav text="Projects" to="/#project" />
-             <Nav text="Contact" to="/#contact" />
-           </div>
-           <div className="flex flex-col p-4 justify-end items-center bg-black gap-2">
-             <Socials
-               location={gitlogo}
-               to="https://github.com/temidayo24"
-               alt="github"
-               scrolled={scrolled}
-             />
-             <Socials
-               location={linkedin}
-               to="https://www.linkedin.com/temidayokehinde"
-               alt="linkedin"
-               scrolled={scrolled}
-             />
-             <Socials
-               location={twitter}
-               to="/git"
-               alt="twitter"
-               scrolled={scrolled}
-             />
-             <Socials
-               location={mail}
-               to="/git"
-               alt="mail"
-               scrolled={scrolled}
-             />
-             <Socials
-               location={call}
-               to="/git"
-               alt="call"
-               scrolled={scrolled}
-             />
-           </div>
-         </div>
-       </div>
-     );
-   };
+const Header = ({ scrolled, dropdown, handleClick }) => {
+  const Dropdown = () => {
+    return (
+      <div className="w-full  bg-eggshell h-screen items-start">
+        <div className="flex justify-between gap-6 font-bold border-sm border-black p-[5%] m-[5%] h-[90vh]">
+          <div className="flex flex-col gap-6 font-bold text-lg text-black h-fit">
+            <Nav text="Home" to="/#home" />
+            <Nav text="About" to="/#about" />
+            <Nav text="Projects" to="/#project" />
+            <Nav text="Contact" to="/#contact" />
+          </div>
+          <div className="flex flex-col p-4 self-start items-center bg-black gap-2 h-fit">
+            <Socials
+              location={gitlogo}
+              to="https://github.com/temidayo24"
+              alt="github"
+              scrolled={scrolled}
+            />
+            <Socials
+              location={linkedin}
+              to="https://www.linkedin.com/temidayokehinde"
+              alt="linkedin"
+              scrolled={scrolled}
+            />
+            <Socials
+              location={twitter}
+              to="/git"
+              alt="twitter"
+              scrolled={scrolled}
+            />
+            <Socials location={mail} to="/git" alt="mail" scrolled={scrolled} />
+            <Socials
+              location={call}
+              to="https://wa.me/2348188171838"
+              alt="call"
+              scrolled={scrolled}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
   return (
     <div
       className={`flex justify-between px-[3%] py-[10px] text-eggshell font-bold large:text-[1.1em] fixed w-full z-100 ${
-        scrolled ? "z-50 bg-coral border-b-[1px] border-black" : ""
-      }`}
+        scrolled && !dropdown ? "z-50 bg-coral border-b-[1px] border-black" : ""
+      } ${dropdown ? "bg-black" : ""}`}
     >
       {dropdown ? (
         " "
@@ -105,7 +100,12 @@ const Header = ({scrolled, dropdown, handleClick}) => {
           scrolled={scrolled}
         />
         <Socials location={mail} to="/git" alt="mail" scrolled={scrolled} />
-        <Socials location={call} to="/git" alt="call" scrolled={scrolled} />
+        <Socials
+          location={call}
+          to="https://wa.me/2348188171838"
+          alt="call"
+          scrolled={scrolled}
+        />
       </div>
       <div
         onClick={handleClick}
