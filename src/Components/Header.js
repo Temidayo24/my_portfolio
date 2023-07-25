@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import logo from "./../logo.svg.svg";
+import logo from "../Assets/logo.svg.svg";
 import Socials from "./Socials";
-import twitter from "../twitter.svg";
-import gitlogo from "../github.svg";
-import linkedin from "../linkedin.svg";
-import mail from "../email.png";
-import call from "../call.svg";
-import menu from "../menu.svg";
-import close from "../close.svg";
+import twitter from "../Assets/twitter.svg";
+import gitlogo from "../Assets/github.svg";
+import linkedin from "../Assets/linkedin.svg";
+import mail from "../Assets/email.png";
+import call from "../Assets/call.svg";
+import menu from "../Assets/menu.svg";
+import close from "../Assets/close.svg";
 import { Link, NavLink } from "react-router-dom";
 import Nav from "./Nav";
 
