@@ -71,7 +71,9 @@ const Header = ({ scrolled, dropdown, handleClick }) => {
           <img
             src={logo}
             alt="my logo"
-            className={`large:w-[48px] w-[32px] ${scrolled ? "change" : ""}`}
+            className={`large:w-[48px] w-[32px] ${
+              scrolled && !dropdown ? "change" : ""
+            }`}
           />
         </Link>
       )}
@@ -91,30 +93,35 @@ const Header = ({ scrolled, dropdown, handleClick }) => {
           to="https://github.com/temidayo24"
           alt="github"
           scrolled={scrolled}
+          dropdown={dropdown}
         />
         <Socials
           location={linkedin}
           to="https://www.linkedin.com/in/temidayokehinde"
           alt="linkedin"
           scrolled={scrolled}
+          dropdown={dropdown}
         />
         <Socials
           location={twitter}
           to="https://twitter.com/ade_bi_ke"
           alt="twitter"
           scrolled={scrolled}
+          dropdown={dropdown}
         />
         <Socials
           location={mail}
           to="mailto:temidayo.kehinde.10@gmail.com"
           alt="mail"
           scrolled={scrolled}
+          dropdown={dropdown}
         />
         <Socials
           location={call}
           to="https://wa.me/2348188171838"
           alt="call"
           scrolled={scrolled}
+          dropdown={dropdown}
         />
       </div>
       <div
@@ -127,11 +134,7 @@ const Header = ({ scrolled, dropdown, handleClick }) => {
       >
         <img
           src={dropdown ? close : menu}
-          className={
-            scrolled
-              ? "w-8  self-end justify-end large:items-center"
-              : "w-8  self-end justify-end change"
-          }
+          className={`w-8  self-end justify-end large:items-center ${scrolled && !dropdown ? " " : "change"}`}
           onClick={handleClick}
         />
         {dropdown && <Dropdown />}

@@ -165,7 +165,7 @@ const Home = () => {
                     <img src={tag} className="inline large:w-10 pl-2 w-8" />
                   </span>
                 </div>
-                <div className="tracking-wide capitalize text-right large:text-lg flex flex-col gap-2 font-bold">
+                <div className="tracking-wide capitalize text-right flex flex-col gap-2 font-bold">
                   <p className="text-right large:w-[95%] w-[90%] self-end justify-right">
                     I am <span className="">passionate</span> about bridging the
                     gap between businesses and their customers by bringing{" "}
