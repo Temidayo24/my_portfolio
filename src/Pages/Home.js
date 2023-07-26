@@ -170,7 +170,7 @@ const Home = () => {
                     I am <span className="">passionate</span> about bridging the
                     gap between businesses and their customers by bringing{" "}
                     <span className=" "> user-friendly designs</span> to life
-                    using <span className=""> codes.</span>
+                    using <span className=""> lines of code.</span>
                   </p>
                   <Link className=" text-[16px] flex justify-right self-end italic font-bold">
                     <span className="text-html">
